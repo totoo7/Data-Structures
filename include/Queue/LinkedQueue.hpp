@@ -16,9 +16,6 @@ class LinkedQueue {
         bool empty() const;
         ~LinkedQueue();
     private:
-        void clear();
-        void copy(const LinkedQueue<T>& rhs);
-    private:
         struct Node {
             Node* next = nullptr;
             T data;
@@ -26,12 +23,20 @@ class LinkedQueue {
         Node* first = nullptr;
         Node* last = nullptr;
         int count = 0;
+    private:
+        void clear();
+        void swap(Node*& first, Node*& last);
+        
 };
 
 template<typename T>
-LinkedQueue<T>::LinkedQueue(const LinkedQueue<T>& rhs) {
+inline LinkedQueue<T>::LinkedQueue(const LinkedQueue<T>& rhs) {
     try {
-        copy(rhs);
+        Node* iter = rhs.first;
+        while (iter) {
+            enqueue(iter->data);
+            iter = iter->next;
+        }
     } catch (std::bad_alloc &ex) {
         clear();
         throw;
@@ -39,15 +44,21 @@ LinkedQueue<T>::LinkedQueue(const LinkedQueue<T>& rhs) {
 }
 
 template<typename T>
-LinkedQueue<T>& LinkedQueue<T>::operator=(const LinkedQueue<T>& rhs) {
+inline LinkedQueue<T>& LinkedQueue<T>::operator=(const LinkedQueue<T>& rhs) {
     if (this == &rhs) return *this;
-    clear();
-    copy(rhs);
+    LinkedQueue<T> temp = rhs;
+    swap(first, temp.first);
+    swap(last, temp.last);
+
+    int tempCount = count;
+    count = temp.count;
+    temp.count = tempCount;
+    
     return *this;
 }
 
 template<typename T>
-void LinkedQueue<T>::enqueue(const T& val) {
+inline void LinkedQueue<T>::enqueue(const T& val) {
     Node* n = new Node {nullptr, val};
     if (!last) {
         first = last = n;
@@ -59,7 +70,7 @@ void LinkedQueue<T>::enqueue(const T& val) {
 }
 
 template<typename T>
-void LinkedQueue<T>::dequeue() {
+inline void LinkedQueue<T>::dequeue() {
     Node* n = first;
     first = first->next;
     delete n;
@@ -68,36 +79,34 @@ void LinkedQueue<T>::dequeue() {
 }
 
 template<typename T>
-T& LinkedQueue<T>::peek() {
+inline T& LinkedQueue<T>::peek() {
     return first->data;
 }
 
 template<typename T>
-const T& LinkedQueue<T>::peek() const {
+inline const T& LinkedQueue<T>::peek() const {
     return first->data;
 }
 
 template<typename T>
-bool LinkedQueue<T>::empty() const {
+inline bool LinkedQueue<T>::empty() const {
     return count == 0;
 }
 
 template<typename T>
-void LinkedQueue<T>::clear() {
+inline void LinkedQueue<T>::clear() {
     while(!empty()) dequeue();
 }
 
 template<typename T>
-void LinkedQueue<T>::copy(const LinkedQueue<T>& rhs) {
-    Node* iter = rhs.first;
-    while (iter) {
-        enqueue(iter->data);
-        iter = iter->next;
-    }
+inline void LinkedQueue<T>::swap(Node*& first, Node*& last) {
+    Node* temp = first;
+    first = last;
+    last = temp;
 }
 
 template<typename T>
-LinkedQueue<T>::~LinkedQueue() {
+inline LinkedQueue<T>::~LinkedQueue() {
     clear();
 }
 

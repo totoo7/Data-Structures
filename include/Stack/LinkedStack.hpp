@@ -78,14 +78,14 @@ inline void LinkedStack<T>::pop_back() {
 }
 
 template<typename T>
-void LinkedStack<T>::clear() {
+inline void LinkedStack<T>::clear() {
     while (!is_empty()) {
         pop_back();
     }
 }
 
 template<typename T>
-void LinkedStack<T>::copy(const LinkedStack<T> &rhs) {
+inline void LinkedStack<T>::copy(const LinkedStack<T> &rhs) {
     if (!rhs.top) return;
 
     top = new Node {rhs.top->data, nullptr};
@@ -100,7 +100,7 @@ void LinkedStack<T>::copy(const LinkedStack<T> &rhs) {
 }
 
 template <typename T>
-LinkedStack<T>::~LinkedStack() {
+inline LinkedStack<T>::~LinkedStack() {
     clear();
 }
 
