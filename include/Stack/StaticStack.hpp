@@ -18,16 +18,16 @@ class StaticStack {
         bool is_full() const;
         ~StaticStack();
     private:
-        T* data;
-        size_t top;
+        T* data = nullptr;
+        size_t top = 0;
         const size_t size;
 };
 
 template<typename T>
-inline StaticStack<T>::StaticStack(size_t size) : data(new T[size]), top(0), size(size) {}
+inline StaticStack<T>::StaticStack(size_t size) : data(new T[size]), size(size) {}
 
 template<typename T>
-inline StaticStack<T>::StaticStack(const StaticStack<T>& rhs) : data(new T[rhs.size]), top(0), size(rhs.size) {
+inline StaticStack<T>::StaticStack(const StaticStack<T>& rhs) : data(new T[rhs.size]), size(rhs.size) {
     while (top < rhs.top) push_back(rhs.data[top]);
 }
 
@@ -41,12 +41,12 @@ inline StaticStack<T>& StaticStack<T>::operator=(const StaticStack<T>& rhs) {
 
 template<typename T>
 inline void StaticStack<T>::push_back(const T& val) {
-    if (!is_full()) data[top++] = val;
+    data[top++] = val;
 }
 
 template<typename T>
 inline void StaticStack<T>::pop_back() {
-    if (!is_empty()) top--;
+    top--;
 }
 
 template<typename T>
