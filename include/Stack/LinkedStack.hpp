@@ -27,7 +27,7 @@ class LinkedStack {
 };
 
 template<typename T>
-inline LinkedStack<T>::LinkedStack(const LinkedStack<T>& rhs) : top(nullptr) {
+inline LinkedStack<T>::LinkedStack(const LinkedStack<T>& rhs) {
     try {
         copy(rhs);
     } catch (std::bad_alloc &ex) {
@@ -39,13 +39,8 @@ inline LinkedStack<T>::LinkedStack(const LinkedStack<T>& rhs) : top(nullptr) {
 template<typename T>
 inline LinkedStack<T>& LinkedStack<T>::operator=(const LinkedStack<T>& rhs) {
     if (this == &rhs) return *this;
-    try {
-        clear();
-        copy(rhs);
-    } catch (std::bad_alloc &ex) {
-        clear();
-        throw;
-    }
+    clear();
+    copy(rhs);
     return *this;
 }
 
@@ -82,24 +77,21 @@ inline void LinkedStack<T>::pop_back() {
 template<typename T>
 void LinkedStack<T>::clear() {
     while (!is_empty()) {
-        Node* n = top;
-        top = top->next;
-        delete n;
-        --count;
+        pop_back();
     }
 }
 
 template<typename T>
 void LinkedStack<T>::copy(const LinkedStack<T> &rhs) {
-    if (rhs.top) {
-            top = new Node {rhs.top->data, nullptr};
-            Node* prev = top;
-            Node* rhsCurrent = rhs.top->next;
-            while (rhsCurrent) {
-                prev->next = new Node {rhsCurrent->data, nullptr};
-                prev = prev->next;
-                rhsCurrent = rhsCurrent->next;
-            }
+    if (!rhs.top) return;
+
+    top = new Node {rhs.top->data, nullptr};
+    Node* prev = top;
+    Node* rhsCurrent = rhs.top->next;
+    while (rhsCurrent) {
+        prev->next = new Node {rhsCurrent->data, nullptr};
+        prev = prev->next;
+        rhsCurrent = rhsCurrent->next;
     }
     count = rhs.size();
 }
