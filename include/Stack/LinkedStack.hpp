@@ -1,3 +1,6 @@
+#ifndef LINKED_STACK_HPP
+#define LINKED_STACK_HPP
+
 #include <iostream>
 using namespace std;
 
@@ -100,3 +103,5 @@ template <typename T>
 LinkedStack<T>::~LinkedStack() {
     clear();
 }
+
+#endif
