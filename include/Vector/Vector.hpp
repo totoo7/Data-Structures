@@ -39,6 +39,10 @@ class Vector {
         bool contains(const T& val) const;
         T& operator[](size_t index);
         const T& operator[](size_t index) const;
+        Iterator begin();
+        Iterator end();
+        const Iterator c_begin() const;
+        const Iterator c_end() const;
         ~Vector();
     private:
         void clear();
@@ -208,6 +212,26 @@ inline T& Vector<T>::operator[](size_t index) {
 template<typename T>
 inline const T& Vector<T>::operator[](size_t index) const {
     return data[index];
+}
+
+template<typename T>
+inline Vector<T>::Iterator Vector<T>::begin() {
+    return Vector<T>::Iterator(this, 0);
+}
+
+template<typename T>
+inline Vector<T>::Iterator Vector<T>::end() {
+    return Vector<T>::Iterator(this, count);
+}
+
+template<typename T>
+inline const Vector<T>::Iterator Vector<T>::c_begin() const {
+    return Vector<T>::Iterator(this, 0);
+}
+
+template<typename T>
+inline const Vector<T>::Iterator Vector<T>::c_end() const {
+    return Vector<T>::Iterator(this, count);
 }
 
 template<typename T>
