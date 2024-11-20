@@ -6,6 +6,24 @@ using namespace std;
 
 template <typename T>
 class Vector {
+    public:
+        class Iterator {
+            public:
+                Iterator();
+                Iterator(Vector<T>* vector);
+                Iterator(Vector<T>* vector, size_t index);
+                T& operator*();
+                T* operator->();
+                const T* operator->() const;
+                T& operator[](size_t index);
+                Iterator& operator++();
+                Iterator operator++(int);
+                bool operator!=(const Iterator& rhs) const;
+                bool operator==(const Iterator& rhs) const;
+            private:
+                Vector<T>* pointer;
+                size_t index;
+        };
     public: 
         Vector();
         Vector(const Vector<T>& rhs);
@@ -30,6 +48,61 @@ class Vector {
         size_t count = 0;
         size_t capacity = 2;
 };
+
+template<typename T>
+inline Vector<T>::Iterator::Iterator() : 
+    pointer(nullptr), index(0) {}
+
+template<typename T>
+inline Vector<T>::Iterator::Iterator(Vector<T>* vector) : 
+    pointer(vector), index(0) {}
+
+template<typename T>
+inline Vector<T>::Iterator::Iterator(Vector<T>* vector, size_t index) : 
+    pointer(vector), index(index) {}
+
+template<typename T>
+inline T& Vector<T>::Iterator::operator*() {
+    return (*pointer)[index];
+}
+
+template<typename T>
+inline T* Vector<T>::Iterator::operator->() {
+    return &((*pointer)[index]);
+}
+
+template<typename T>
+inline const T* Vector<T>::Iterator::operator->() const {
+    return &((*pointer)[index]);
+}
+
+template<typename T>
+inline T& Vector<T>::Iterator::operator[](size_t index) {
+    return (*pointer)[this->index + index];
+}
+
+template<typename T>
+inline Vector<T>::Iterator& Vector<T>::Iterator::operator++() {
+    ++index;
+    return *this;
+}
+
+template<typename T>
+inline Vector<T>::Iterator Vector<T>::Iterator::operator++(int) {
+    Iterator temp(*this);
+    ++(*this);
+    return temp;
+}
+
+template<typename T>
+inline bool Vector<T>::Iterator::operator!=(const Iterator& rhs) const {
+    return index != rhs.index;
+}
+
+template<typename T>
+inline bool Vector<T>::Iterator::operator==(const Iterator& rhs) const {
+    return index == rhs.index;
+}
 
 template<typename T>
 inline Vector<T>::Vector() {
