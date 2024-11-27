@@ -1,22 +1,22 @@
-#ifndef STATIC_QUEUE_HPP
-#define STATIC_QUEUE_HPP
+#ifndef STATIC_CIRCULAR_QUEUE_HPP
+#define STATIC_CIRCULAR_QUEUE_HPP
 
 #include <iostream>
 using namespace std;
 
 template<class T>
-class StaticQueue {
+class StaticCircularQueue {
     public:
-        StaticQueue(size_t size = 16);
-        StaticQueue(const StaticQueue<T>& rhs);
-        StaticQueue& operator=(const StaticQueue<T>& rhs);
+        StaticCircularQueue(size_t size = 16);
+        StaticCircularQueue(const StaticCircularQueue<T>& rhs);
+        StaticCircularQueue& operator=(const StaticCircularQueue<T>& rhs);
         void enqueue(const T& val);
         void dequeue();
         T& peek();
         const T& peek() const;
         bool is_empty() const;
         bool is_full() const;
-        ~StaticQueue();
+        ~StaticCircularQueue();
     private:
         T* data = nullptr;
         size_t first, last = 0;
@@ -24,16 +24,32 @@ class StaticQueue {
 };
 
 template<typename T>
-inline StaticQueue<T>::StaticQueue(size_t size) : data(new T[size]), size(size) {}
-
-template<typename T>
-inline StaticQueue<T>::StaticQueue(const StaticQueue<T>& rhs) : data(new T[rhs.size]), size(rhs.size) {
-    for (size_t pos = rhs.first; pos != rhs.last; pos = (pos+1) % size)
-        enqueue(rhs.data[pos]);
+inline StaticCircularQueue<T>::StaticCircularQueue(size_t size) : size(size+1) {
+    try {
+        data = new T[size+1];
+        first = 0;
+        last = 0;
+    } catch (std::bad_alloc &e) {
+        delete[] data;
+        throw;
+    }
 }
 
 template<typename T>
-inline StaticQueue<T>& StaticQueue<T>::operator=(const StaticQueue<T>& rhs) {
+inline StaticCircularQueue<T>::StaticCircularQueue(const StaticCircularQueue<T>& rhs) : size(rhs.size) {
+    try {
+        data = new T[rhs.size];
+        first = last = 0;
+        for (size_t pos = rhs.first; pos != rhs.last; pos = (pos+1) % size)
+            enqueue(rhs.data[pos]);
+    } catch (std::bad_alloc &e) {
+        delete[] data;
+        throw;
+    }
+}
+
+template<typename T>
+inline StaticCircularQueue<T>& StaticCircularQueue<T>::operator=(const StaticCircularQueue<T>& rhs) {
     if (this == &rhs) return *this;
     first = last = 0;
     for (size_t pos = rhs.first; pos != rhs.last; pos = (pos+1) % size)
@@ -42,37 +58,39 @@ inline StaticQueue<T>& StaticQueue<T>::operator=(const StaticQueue<T>& rhs) {
 }
 
 template<typename T>
-inline void StaticQueue<T>::enqueue(const T& val) {
+inline void StaticCircularQueue<T>::enqueue(const T& val) {
     data[last] = val;
     last = (last+1) % size;
 }
 
 template<typename T>
-inline void StaticQueue<T>::dequeue() {
+inline void StaticCircularQueue<T>::dequeue() {
     first = (first+1) % size;
 }
 
 template<typename T>
-inline T& StaticQueue<T>::peek() {
+inline T& StaticCircularQueue<T>::peek() {
     return data[first];
 }
 
 template<typename T>
-inline const T& StaticQueue<T>::peek() const {
+inline const T& StaticCircularQueue<T>::peek() const {
     return data[first];
 }
 
 template<typename T>
-inline bool StaticQueue<T>::is_empty() const {
+inline bool StaticCircularQueue<T>::is_empty() const {
     return first == last;
 }
 
 template<typename T>
-inline bool StaticQueue<T>::is_full() const {
-    return (first+1) % size == last;
+inline bool StaticCircularQueue<T>::is_full() const {
+    return (last+1) % size == first;
 }
 
 template<typename T>
-inline StaticQueue<T>::~StaticQueue() { delete[] data; }
+inline StaticCircularQueue<T>::~StaticCircularQueue() { 
+    delete[] data; 
+}
 
 #endif
