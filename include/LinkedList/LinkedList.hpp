@@ -44,9 +44,11 @@ class LinkedList {
         void push_front(const T& val);
         void push_end(const T& val);
         void push_at(size_t index, const T& val);
+        void push_after(Iterator iter, const T& val);
         void pop_front();
         void pop_end();
         void pop_at(size_t index);
+        void pop_after(Iterator iter);
         Iterator begin();
         Iterator end();
         const Iterator c_begin() const;
@@ -216,6 +218,13 @@ inline void LinkedList<T>::push_at(size_t index, const T& val) {
 }
 
 template<typename T>
+inline void LinkedList<T>::push_after(Iterator iter, const T& val) {
+    iter.pointer->next = new Node(iter.pointer->next, val);
+    if (iter.pointer == tail) tail = iter.pointer->next;
+    count++;
+}
+
+template<typename T>
 inline void LinkedList<T>::pop_front() {
     pop_at(0);
 }
@@ -238,6 +247,15 @@ inline void LinkedList<T>::pop_at(size_t index) {
         iter->next = to_remove->next;
         if (to_remove == tail) tail = iter;
     }
+    delete to_remove;
+    --count;
+}
+
+template<typename T>
+inline void LinkedList<T>::pop_after(Iterator iter) {
+    Node* to_remove = iter.pointer->next;
+    iter.pointer->next = to_remove->next;
+    if (to_remove == tail) tail = iter.pointer;
     delete to_remove;
     --count;
 }
