@@ -18,6 +18,8 @@ class StaticCircularQueue {
         bool is_full() const;
         ~StaticCircularQueue();
     private:
+        void swap(T*& a, T*& b);
+    private:
         T* data = nullptr;
         size_t first, last = 0;
         const size_t size;
@@ -51,9 +53,18 @@ inline StaticCircularQueue<T>::StaticCircularQueue(const StaticCircularQueue<T>&
 template<typename T>
 inline StaticCircularQueue<T>& StaticCircularQueue<T>::operator=(const StaticCircularQueue<T>& rhs) {
     if (this == &rhs) return *this;
-    first = last = 0;
-    for (size_t pos = rhs.first; pos != rhs.last; pos = (pos+1) % size)
-        enqueue(rhs.data[pos]);
+
+    StaticCircularQueue<T> temp = rhs;
+    swap(data, temp.data);
+
+    size_t temp_first = first;
+    first = temp.first;
+    temp.first = temp_first;
+
+    size_t temp_last = last;
+    last = temp.last;
+    temp.last = last;
+
     return *this;
 }
 
@@ -86,6 +97,13 @@ inline bool StaticCircularQueue<T>::is_empty() const {
 template<typename T>
 inline bool StaticCircularQueue<T>::is_full() const {
     return (last+1) % size == first;
+}
+
+template<typename T>
+inline void StaticCircularQueue<T>::swap(T*& a, T*& b) {
+    T* temp = a;
+    a = b;
+    b = temp;
 }
 
 template<typename T>
