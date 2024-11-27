@@ -6,6 +6,29 @@ using namespace std;
 
 template<typename T>
 class LinkedList {
+    private:
+        struct Node {
+            Node* next = nullptr;
+            T data;
+            Node(Node* next_val, T data_val) : next(next_val), data(data_val) {}
+        };
+    public:
+        class Iterator {
+            public:
+                T& operator*();
+                const T& operator*() const;
+                T* operator->();
+                const T* operator->() const;
+                Iterator& operator++();
+                Iterator operator++(int);
+                bool operator!=(const Iterator& rhs) const;
+                bool operator==(const Iterator& rhs) const;
+                friend class LinkedList<T>;
+            protected:
+                Iterator(LinkedList<T>::Node* node);
+            protected:
+                LinkedList<T>::Node* pointer;
+        };
     public:
         LinkedList()=default;
         LinkedList(const LinkedList<T>& rhs);
@@ -24,16 +47,16 @@ class LinkedList {
         void pop_front();
         void pop_end();
         void pop_at(size_t index);
+        Iterator begin();
+        Iterator end();
+        const Iterator c_begin() const;
+        const Iterator c_end() const;
         void append(const LinkedList<T>& rhs);
         void reverse();
         void sort();
         bool is_sorted() const;
         ~LinkedList();
     private: 
-        struct Node {
-            Node* next = nullptr;
-            T data;
-        };
         Node* head = nullptr;
         Node* tail = nullptr;
         size_t count = 0;
@@ -41,6 +64,52 @@ class LinkedList {
         void swap(Node*& a, Node*& b);
         void clear();
 };
+
+template<typename T>
+inline LinkedList<T>::Iterator::Iterator(LinkedList<T>::Node* node) : pointer(node) {}
+
+template<typename T>
+inline T& LinkedList<T>::Iterator::operator*() {
+    return pointer->data;
+}
+
+template<typename T>
+inline const T& LinkedList<T>::Iterator::operator*() const {
+    return pointer->data;
+}
+
+template<typename T>
+inline T* LinkedList<T>::Iterator::operator->() {
+    return &pointer->data;
+}
+
+template<typename T>
+inline const T* LinkedList<T>::Iterator::operator->() const {
+    return &pointer->data;
+}
+
+template<typename T>
+inline LinkedList<T>::Iterator& LinkedList<T>::Iterator::operator++() {
+    pointer = pointer->next;
+    return *this;
+}
+
+template<typename T>
+inline LinkedList<T>::Iterator LinkedList<T>::Iterator::operator++(int) {
+    Iterator temp(*this);
+    ++(*this);
+    return temp;
+}
+
+template<typename T>
+inline bool LinkedList<T>::Iterator::operator!=(const Iterator& rhs) const {
+    return pointer == rhs.pointer;
+}
+
+template<typename T>
+inline bool LinkedList<T>::Iterator::operator==(const Iterator& rhs) const {
+    return !(*this == rhs);
+}
 
 template<typename T>
 inline LinkedList<T>::LinkedList(const LinkedList& rhs) {
@@ -133,15 +202,15 @@ inline void LinkedList<T>::push_end(const T& val) {
 template<typename T>
 inline void LinkedList<T>::push_at(size_t index, const T& val) {
     if (index == 0) {
-        head = new Node { head, val };
+        head = new Node (head, val);
         if (is_empty()) tail = head;
     } else if (index == size()) {
-        tail->next = new Node { nullptr, val };
+        tail->next = new Node (nullptr, val);
         tail = tail->next;
     } else {
         Node* iter = head;
         for (size_t i = 0; i < index - 1; ++i, iter = iter->next);
-        iter->next = new Node {iter->next, val};
+        iter->next = new Node (iter->next, val);
     }
     ++count;
 }
@@ -171,6 +240,26 @@ inline void LinkedList<T>::pop_at(size_t index) {
     }
     delete to_remove;
     --count;
+}
+
+template<typename T>
+inline LinkedList<T>::Iterator LinkedList<T>::begin() {
+    return LinkedList<T>::Iterator(head);
+}
+
+template<typename T>
+inline LinkedList<T>::Iterator LinkedList<T>::end() {
+    return LinkedList<T>::Iterator(nullptr);
+}
+
+template<typename T>
+inline const LinkedList<T>::Iterator LinkedList<T>::c_begin() const {
+    return LinkedList<T>::Iterator(head);
+}
+
+template<typename T>
+inline const LinkedList<T>::Iterator LinkedList<T>::c_end() const {
+    return LinkedList<T>::Iterator(nullptr);
 }
 
 template<typename T>
