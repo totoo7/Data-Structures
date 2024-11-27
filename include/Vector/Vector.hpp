@@ -9,9 +9,6 @@ class Vector {
     public:
         class Iterator {
             public:
-                Iterator();
-                Iterator(Vector<T>* vector);
-                Iterator(Vector<T>* vector, size_t index);
                 T& operator*();
                 T* operator->();
                 const T* operator->() const;
@@ -20,7 +17,12 @@ class Vector {
                 Iterator operator++(int);
                 bool operator!=(const Iterator& rhs) const;
                 bool operator==(const Iterator& rhs) const;
-            private:
+                friend class Vector<T>;
+            protected:
+                Iterator();
+                Iterator(Vector<T>* vector);
+                Iterator(Vector<T>* vector, size_t index);
+            protected:
                 Vector<T>* pointer;
                 size_t index;
         };
@@ -121,9 +123,11 @@ inline Vector<T>::Vector() {
 template<typename T>
 inline Vector<T>::Vector(const Vector<T>& rhs) {
     try {
-        for (size_t i = 0; i < rhs.size(); i++) {
-            push_back(rhs[i]);
-        }
+        data = new T[rhs.capacity];
+        count = rhs.count;
+        capacity = rhs.capacity;
+        for (size_t i = 0; i < count; i++) 
+            data[i] = rhs.data[i];
     } catch (std::bad_alloc& e) {
         clear();
         throw;
@@ -149,7 +153,7 @@ inline Vector<T>& Vector<T>::operator=(const Vector<T>& rhs) {
 
 template<typename T>
 inline void Vector<T>::push_back(const T& val) {
-    if (size() == capacity) {
+    if (count == capacity) {
         T* temp = new T[capacity * 2];
         for (size_t i = 0; i < capacity; i++) {
             temp[i] = data[i];
@@ -198,7 +202,7 @@ inline const T& Vector<T>::back() const {
 
 template<typename T>
 inline bool Vector<T>::contains(const T& val) const {
-    for (size_t i = 0; i < size; i++) {
+    for (size_t i = 0; i < count; i++) {
         if (data[i] == val) return true;
     }
     return false;
