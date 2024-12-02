@@ -1,0 +1,262 @@
+\doxysection{Deque\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_deque}{}\label{class_deque}\index{Deque$<$ T $>$@{Deque$<$ T $>$}}
+
+
+A class that implements a double-\/ended queue (\doxylink{class_deque}{Deque}).  
+
+
+
+
+{\ttfamily \#include $<$Deque.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_deque_ad962e9c9ddb2c3290ea91f796d7051bc}{Deque}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_deque}{Deque} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_deque_a4f9e38ece60144bcba1d0b0afc82dc13}{Deque}} (const \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_deque}{Deque} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$ \& \mbox{\hyperlink{class_deque_abcd1c331b4844f00b83b40c3c1426899}{operator=}} (const \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Assignment operator for the \doxylink{class_deque}{Deque} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_deque_a071ed9ac2c318a887122b84be26736aa}{push\+\_\+back}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Adds an element to the back of the deque. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_deque_af9940385f67da2c7b90d56f97a3772ce}{push\+\_\+front}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Adds an element to the front of the deque. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_deque_a98c69f46add39db7e5343acff654a50e}{pop\+\_\+back}} ()
+\begin{DoxyCompactList}\small\item\em Removes the element at the back of the deque. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_deque_a0e1a1df410dce314324203a54844f51e}{pop\+\_\+front}} ()
+\begin{DoxyCompactList}\small\item\em Removes the element at the front of the deque. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_deque_a8e0b65e76b6fa2b682346f48a92f39d6}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements currently in the deque. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_deque_a9027d018be5719495a216f28b00801e1}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the deque is empty. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_deque_a5da300befcaf596fa2af79b6c12ca853}{front}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the element at the front of the deque. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{class_deque_af40009710b3c3cfd63eac95bcd66850b}{front}} () const
+\begin{DoxyCompactList}\small\item\em Returns a constant reference to the element at the front of the deque. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_deque_a816fabec7f0877388934794ca6751e75}{back}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the element at the back of the deque. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{class_deque_a5102e0568852b7a7a34c323753c92cfd}{back}} () const
+\begin{DoxyCompactList}\small\item\em Returns a constant reference to the element at the back of the deque. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_deque_a7a214bb3ef8cb676f9ef0e9825ae4b1b}{\texorpdfstring{$\sim$}{\string~}\+Deque}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_deque}{Deque} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Deque$<$ T $>$}
+A class that implements a double-\/ended queue (\doxylink{class_deque}{Deque}). 
+
+A deque (double-\/ended queue) is a linear data structure that allows elements to be added or removed from both ends. This implementation dynamically resizes when the deque reaches capacity, ensuring efficient usage of memory.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the deque. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_deque_ad962e9c9ddb2c3290ea91f796d7051bc}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!Deque@{Deque}}
+\index{Deque@{Deque}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Deque()}{Deque()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_deque_ad962e9c9ddb2c3290ea91f796d7051bc} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\mbox{\hyperlink{class_deque}{\+::\+Deque}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{class_deque}{Deque} class. 
+
+Initializes the deque with an initial capacity and allocates memory for storage. \Hypertarget{class_deque_a4f9e38ece60144bcba1d0b0afc82dc13}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!Deque@{Deque}}
+\index{Deque@{Deque}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Deque()}{Deque()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_deque_a4f9e38ece60144bcba1d0b0afc82dc13} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\mbox{\hyperlink{class_deque}{\+::\+Deque}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the \doxylink{class_deque}{Deque} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The deque to copy from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_deque_a7a214bb3ef8cb676f9ef0e9825ae4b1b}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!````~Deque@{\texorpdfstring{$\sim$}{\string~}Deque}}
+\index{````~Deque@{\texorpdfstring{$\sim$}{\string~}Deque}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Deque()}{\string~Deque()}}
+{\footnotesize\ttfamily \label{class_deque_a7a214bb3ef8cb676f9ef0e9825ae4b1b} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_deque}{Deque}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{class_deque}{Deque} class. 
+
+Frees the dynamically allocated memory used by the deque. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_deque_a816fabec7f0877388934794ca6751e75}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!back@{back}}
+\index{back@{back}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_deque_a816fabec7f0877388934794ca6751e75} 
+template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns a reference to the element at the back of the deque. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the element at the back of the deque. 
+\end{DoxyReturn}
+\Hypertarget{class_deque_a5102e0568852b7a7a34c323753c92cfd}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!back@{back}}
+\index{back@{back}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_deque_a5102e0568852b7a7a34c323753c92cfd} 
+template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns a constant reference to the element at the back of the deque. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the element at the back of the deque. 
+\end{DoxyReturn}
+\Hypertarget{class_deque_a9027d018be5719495a216f28b00801e1}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{class_deque_a9027d018be5719495a216f28b00801e1} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the deque is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the deque is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_deque_a5da300befcaf596fa2af79b6c12ca853}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!front@{front}}
+\index{front@{front}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_deque_a5da300befcaf596fa2af79b6c12ca853} 
+template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns a reference to the element at the front of the deque. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the element at the front of the deque. 
+\end{DoxyReturn}
+\Hypertarget{class_deque_af40009710b3c3cfd63eac95bcd66850b}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!front@{front}}
+\index{front@{front}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_deque_af40009710b3c3cfd63eac95bcd66850b} 
+template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns a constant reference to the element at the front of the deque. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the element at the front of the deque. 
+\end{DoxyReturn}
+\Hypertarget{class_deque_abcd1c331b4844f00b83b40c3c1426899}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_deque_abcd1c331b4844f00b83b40c3c1426899} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$ \& \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})}
+
+
+
+Assignment operator for the \doxylink{class_deque}{Deque} class. 
+
+Assigns the contents of one deque to another using the copy-\/and-\/swap idiom. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The deque to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the assigned deque. 
+\end{DoxyReturn}
+\Hypertarget{class_deque_a98c69f46add39db7e5343acff654a50e}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily \label{class_deque_a98c69f46add39db7e5343acff654a50e} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Removes the element at the back of the deque. 
+
+\Hypertarget{class_deque_a0e1a1df410dce314324203a54844f51e}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!pop\_front@{pop\_front}}
+\index{pop\_front@{pop\_front}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_front()}{pop\_front()}}
+{\footnotesize\ttfamily \label{class_deque_a0e1a1df410dce314324203a54844f51e} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::pop\+\_\+front (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Removes the element at the front of the deque. 
+
+\Hypertarget{class_deque_a071ed9ac2c318a887122b84be26736aa}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily \label{class_deque_a071ed9ac2c318a887122b84be26736aa} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const T \&}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Adds an element to the back of the deque. 
+
+If the deque is full, the underlying array is resized before adding the element. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The element to add to the back of the deque. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_deque_af9940385f67da2c7b90d56f97a3772ce}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!push\_front@{push\_front}}
+\index{push\_front@{push\_front}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_front()}{push\_front()}}
+{\footnotesize\ttfamily \label{class_deque_af9940385f67da2c7b90d56f97a3772ce} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::push\+\_\+front (\begin{DoxyParamCaption}\item[{const T \&}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Adds an element to the front of the deque. 
+
+If the deque is full, the underlying array is resized before adding the element. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The element to add to the front of the deque. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_deque_a8e0b65e76b6fa2b682346f48a92f39d6}\index{Deque$<$ T $>$@{Deque$<$ T $>$}!size@{size}}
+\index{size@{size}!Deque$<$ T $>$@{Deque$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_deque_a8e0b65e76b6fa2b682346f48a92f39d6} 
+template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_deque}{Deque}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of elements currently in the deque. 
+
+\begin{DoxyReturn}{Returns}
+The number of elements in the deque. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Deque.\+hpp\end{DoxyCompactItemize}
