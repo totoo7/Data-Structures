@@ -1,0 +1,69 @@
+\chapter{Data Structures Library in C++}
+\hypertarget{index}{}\label{index}\index{Data Structures Library in C++@{Data Structures Library in C++}}
+\label{index_md__2_users_2macbookpro_2_programming_2_data-_structures_2_r_e_a_d_m_e}%
+\Hypertarget{index_md__2_users_2macbookpro_2_programming_2_data-_structures_2_r_e_a_d_m_e}%
+
+
+This repository contains a collection of fundamental data structures implemented in C++ with a focus on efficiency, flexibility, and clear understanding. The project is structured as a CMake-\/based library, making it easy to integrate into other C++ projects or build and test independently.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Data Structures Included}{Data Structures Included}}\label{index_autotoc_md1}
+This library provides implementations of the following data structures\+:\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{1. {\bfseries{Vector}}}{1. {\bfseries{Vector}}}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item A dynamic array-\/like container, implemented with templates to support any data type.
+\item Includes functionalities like {\ttfamily push\+\_\+back}, {\ttfamily pop\+\_\+back}, {\ttfamily operator\mbox{[}\mbox{]}}, and iterators for easy traversal.
+\item Dynamically resizes itself when the capacity is exceeded.
+\item Supports copy constructor, assignment operator, and deep copying to manage memory safely.
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{2. {\bfseries{Linked\+List}}}{2. {\bfseries{Linked\+List}}}}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item A basic linked list implementation supporting insertion and removal of nodes from both ends.
+\item Includes functionalities like {\ttfamily push\+\_\+back}, {\ttfamily push\+\_\+front}, {\ttfamily pop\+\_\+back}, {\ttfamily pop\+\_\+front}, and iteration support via custom iterators.
+\item Memory management is handled with dynamic allocation/deallocation.
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{3. {\bfseries{Doubly\+Linked\+List}}}{3. {\bfseries{Doubly\+Linked\+List}}}}\label{index_autotoc_md4}
+
+\begin{DoxyItemize}
+\item An enhanced version of the {\ttfamily \doxylink{class_linked_list}{Linked\+List}} where each node has pointers to both the next and previous elements.
+\item Provides efficient access to both ends of the list and supports operations like {\ttfamily insert\+\_\+after}, {\ttfamily insert\+\_\+before}, and deletion from any position in the list.
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{4. {\bfseries{Queue (Implemented with {\ttfamily std\+::vector})}}}{4. {\bfseries{Queue (Implemented with {\ttfamily std\+::vector})}}}}\label{index_autotoc_md5}
+
+\begin{DoxyItemize}
+\item A queue implemented using a {\ttfamily std\+::vector} to store elements.
+\item Supports {\ttfamily enqueue} and {\ttfamily dequeue} operations.
+\item Efficient resizing and management of the underlying container.
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{5. {\bfseries{Static\+Queue (Static Circular Queue)}}}{5. {\bfseries{Static\+Queue (Static Circular Queue)}}}}\label{index_autotoc_md6}
+
+\begin{DoxyItemize}
+\item A queue with a fixed size, implemented as a circular buffer.
+\item Operations like {\ttfamily enqueue} and {\ttfamily dequeue} are efficiently handled, with no resizing needed.
+\item A perfect choice for memory-\/constrained environments.
+\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{6. {\bfseries{Linked\+Queue}}}{6. {\bfseries{Linked\+Queue}}}}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item A queue implemented using linked nodes, where each node points to the next one.
+\item Supports {\ttfamily enqueue} and {\ttfamily dequeue} operations, with dynamic resizing of the structure.
+\item Ensures that the queue operations are efficient, with no need for resizing.
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{7. {\bfseries{Stack (Implemented with {\ttfamily std\+::vector})}}}{7. {\bfseries{Stack (Implemented with {\ttfamily std\+::vector})}}}}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item A stack data structure that uses {\ttfamily std\+::vector} as the underlying container.
+\item Provides standard stack operations\+: {\ttfamily push}, {\ttfamily pop}, and {\ttfamily top}.
+\item Dynamically resizes itself as needed, with efficient memory usage.
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{8. {\bfseries{Static\+Stack}}}{8. {\bfseries{Static\+Stack}}}}\label{index_autotoc_md9}
+
+\begin{DoxyItemize}
+\item A stack with a fixed size, implemented using a static array.
+\item Supports {\ttfamily push}, {\ttfamily pop}, and {\ttfamily top} operations.
+\item Suitable for cases where the stack size is known ahead of time.
+\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{9. {\bfseries{Linked\+Stack}}}{9. {\bfseries{Linked\+Stack}}}}\label{index_autotoc_md10}
+
+\begin{DoxyItemize}
+\item A stack implemented using linked nodes, where each node points to the next one.
+\item Allows for dynamic memory allocation and supports {\ttfamily push}, {\ttfamily pop}, and {\ttfamily top} operations.
+\end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{Key Features}{Key Features}}\label{index_autotoc_md11}
+
+\begin{DoxyItemize}
+\item {\bfseries{CMake-\/based Project}}\+: The library is designed to be used with CMake, making it easy to integrate into larger projects.
+\item {\bfseries{Template-\/based Implementations}}\+: All data structures are implemented as templates, allowing them to work with any data type.
+\item {\bfseries{Memory Management}}\+: Uses dynamic memory allocation/deallocation where appropriate to ensure efficient memory use and prevent memory leaks.
+\item {\bfseries{Iterators}}\+: Some data structures (like {\ttfamily \doxylink{class_vector}{Vector}}, {\ttfamily \doxylink{class_linked_list}{Linked\+List}}, and {\ttfamily \doxylink{class_doubly_linked_list}{Doubly\+Linked\+List}}) include iterators to facilitate easy traversal and element access.
+\item {\bfseries{Clear and Modular Design}}\+: Each data structure is encapsulated in its own header file for clarity, and the library can be expanded with additional data structures as needed. 
+\end{DoxyItemize}

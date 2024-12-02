@@ -1,0 +1,197 @@
+\doxysection{Linked\+Stack\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_linked_stack}{}\label{class_linked_stack}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+
+
+A generic implementation of a linked stack data structure.  
+
+
+
+
+{\ttfamily \#include $<$Linked\+Stack.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_linked_stack_a2cb00785db7fed80512147ef28a3caea}{Linked\+Stack}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_linked_stack_af22491117a4adec8fa1f61fe4f04ccdd}{Linked\+Stack}} (const \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$ \& \mbox{\hyperlink{class_linked_stack_ab6dbc8b19efad5135670c02430f4594c}{operator=}} (const \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_linked_stack_a9c57e23fa333a6eb53a3874da556e555}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the stack. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_linked_stack_af5ba899899a864da44402c3d8540ac85}{is\+\_\+empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the stack is empty. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_linked_stack_aec29854afa46ee2ed5f386e2833529e6}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Provides access to the top element of the stack. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{class_linked_stack_afee7a3b8236cf77171b249b04f2d913d}{peek}} () const
+\begin{DoxyCompactList}\small\item\em Provides access to the top element of the stack (const version). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_stack_a014ef757f84ff1621b9a6fdd285ee28b}{push\+\_\+back}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Pushes an element onto the stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_stack_afb66b1c8fec52405d21a583ae713d565}{pop\+\_\+back}} ()
+\begin{DoxyCompactList}\small\item\em Removes the top element from the stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_linked_stack_a7aaabff0211c06c7a0cdfbe298a2755c}{\texorpdfstring{$\sim$}{\string~}\+Linked\+Stack}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that clears the stack and releases memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Linked\+Stack$<$ T $>$}
+A generic implementation of a linked stack data structure. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the stack. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_linked_stack_a2cb00785db7fed80512147ef28a3caea}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}!LinkedStack@{LinkedStack}}
+\index{LinkedStack@{LinkedStack}!LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedStack()}{LinkedStack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_stack_a2cb00785db7fed80512147ef28a3caea} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$\mbox{\hyperlink{class_linked_stack}{\+::\+Linked\+Stack}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_linked_stack_af22491117a4adec8fa1f61fe4f04ccdd}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}!LinkedStack@{LinkedStack}}
+\index{LinkedStack@{LinkedStack}!LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedStack()}{LinkedStack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_stack_af22491117a4adec8fa1f61fe4f04ccdd} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$\mbox{\hyperlink{class_linked_stack}{\+::\+Linked\+Stack}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The stack to copy from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_linked_stack_a7aaabff0211c06c7a0cdfbe298a2755c}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}!````~LinkedStack@{\texorpdfstring{$\sim$}{\string~}LinkedStack}}
+\index{````~LinkedStack@{\texorpdfstring{$\sim$}{\string~}LinkedStack}!LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LinkedStack()}{\string~LinkedStack()}}
+{\footnotesize\ttfamily \label{class_linked_stack_a7aaabff0211c06c7a0cdfbe298a2755c} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_linked_stack}{Linked\+Stack}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor that clears the stack and releases memory. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_linked_stack_af5ba899899a864da44402c3d8540ac85}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily \label{class_linked_stack_af5ba899899a864da44402c3d8540ac85} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$\+::is\+\_\+empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the stack is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the stack is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_stack_ab6dbc8b19efad5135670c02430f4594c}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_linked_stack_ab6dbc8b19efad5135670c02430f4594c} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$ \& \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The stack to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the assigned stack. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_stack_aec29854afa46ee2ed5f386e2833529e6}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_stack_aec29854afa46ee2ed5f386e2833529e6} 
+template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides access to the top element of the stack. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the top element. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_stack_afee7a3b8236cf77171b249b04f2d913d}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_stack_afee7a3b8236cf77171b249b04f2d913d} 
+template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides access to the top element of the stack (const version). 
+
+\begin{DoxyReturn}{Returns}
+A const reference to the top element. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_stack_afb66b1c8fec52405d21a583ae713d565}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily \label{class_linked_stack_afb66b1c8fec52405d21a583ae713d565} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the top element from the stack. 
+
+\Hypertarget{class_linked_stack_a014ef757f84ff1621b9a6fdd285ee28b}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily \label{class_linked_stack_a014ef757f84ff1621b9a6fdd285ee28b} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const T \&}]{val}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes an element onto the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to push onto the stack. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_linked_stack_a9c57e23fa333a6eb53a3874da556e555}\index{LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}!size@{size}}
+\index{size@{size}!LinkedStack$<$ T $>$@{LinkedStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_linked_stack_a9c57e23fa333a6eb53a3874da556e555} 
+template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_linked_stack}{Linked\+Stack}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of elements in the stack. 
+
+\begin{DoxyReturn}{Returns}
+The size of the stack. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Linked\+Stack.\+hpp\end{DoxyCompactItemize}

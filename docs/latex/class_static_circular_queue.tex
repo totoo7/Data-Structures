@@ -1,0 +1,202 @@
+\doxysection{Static\+Circular\+Queue\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_static_circular_queue}{}\label{class_static_circular_queue}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+
+
+A static circular queue implementation using a fixed-\/size array.  
+
+
+
+
+{\ttfamily \#include $<$Static\+Circular\+Queue.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_static_circular_queue_a77adf619feef443d58d6a8ded6aa59f4}{Static\+Circular\+Queue}} (size\+\_\+t size=16)
+\begin{DoxyCompactList}\small\item\em Constructs a circular queue with a specified capacity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_static_circular_queue_a071fd19e0d6b2e9c82a503a7f5457ff5}{Static\+Circular\+Queue}} (const \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}} \& \mbox{\hyperlink{class_static_circular_queue_ad18b5ea0ae77fa4691dbdbc0ec4b8703}{operator=}} (const \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_static_circular_queue_a9853bd352533b8901866285102ff6b2e}{enqueue}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Adds an element to the back of the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_static_circular_queue_abbe4de14002152ecf6413af89a65aac0}{dequeue}} ()
+\begin{DoxyCompactList}\small\item\em Removes the front element from the queue. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_static_circular_queue_ad8292dbd692ae10829ae2a0610614c0d}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Provides access to the front element of the queue. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{class_static_circular_queue_ad7b9a681054beb4b986ed3aec7cf3aed}{peek}} () const
+\begin{DoxyCompactList}\small\item\em Provides access to the front element of the queue (const version). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_static_circular_queue_a735ba07378b7279814b4311a47110f3d}{is\+\_\+empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the queue is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_static_circular_queue_a92481141cff5f978f1bd861ed0380cf4}{is\+\_\+full}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the queue is full. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_static_circular_queue_a3ab552b7201d8ed5a508f321ad6deb71}{\texorpdfstring{$\sim$}{\string~}\+Static\+Circular\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that releases the allocated memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Static\+Circular\+Queue$<$ T $>$}
+A static circular queue implementation using a fixed-\/size array. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the queue. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_static_circular_queue_a77adf619feef443d58d6a8ded6aa59f4}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}!StaticCircularQueue@{StaticCircularQueue}}
+\index{StaticCircularQueue@{StaticCircularQueue}!StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{StaticCircularQueue()}{StaticCircularQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_static_circular_queue_a77adf619feef443d58d6a8ded6aa59f4} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$\mbox{\hyperlink{class_static_circular_queue}{\+::\+Static\+Circular\+Queue}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size}{ = {\ttfamily 16}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a circular queue with a specified capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The maximum number of elements the queue can hold (default\+: 16). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_static_circular_queue_a071fd19e0d6b2e9c82a503a7f5457ff5}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}!StaticCircularQueue@{StaticCircularQueue}}
+\index{StaticCircularQueue@{StaticCircularQueue}!StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{StaticCircularQueue()}{StaticCircularQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_static_circular_queue_a071fd19e0d6b2e9c82a503a7f5457ff5} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$\mbox{\hyperlink{class_static_circular_queue}{\+::\+Static\+Circular\+Queue}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The queue to copy from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_static_circular_queue_a3ab552b7201d8ed5a508f321ad6deb71}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}!````~StaticCircularQueue@{\texorpdfstring{$\sim$}{\string~}StaticCircularQueue}}
+\index{````~StaticCircularQueue@{\texorpdfstring{$\sim$}{\string~}StaticCircularQueue}!StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StaticCircularQueue()}{\string~StaticCircularQueue()}}
+{\footnotesize\ttfamily \label{class_static_circular_queue_a3ab552b7201d8ed5a508f321ad6deb71} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor that releases the allocated memory. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_static_circular_queue_abbe4de14002152ecf6413af89a65aac0}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily \label{class_static_circular_queue_abbe4de14002152ecf6413af89a65aac0} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$\+::dequeue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the front element from the queue. 
+
+\Hypertarget{class_static_circular_queue_a9853bd352533b8901866285102ff6b2e}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily \label{class_static_circular_queue_a9853bd352533b8901866285102ff6b2e} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$\+::enqueue (\begin{DoxyParamCaption}\item[{const T \&}]{val}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an element to the back of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to enqueue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_static_circular_queue_a735ba07378b7279814b4311a47110f3d}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily \label{class_static_circular_queue_a735ba07378b7279814b4311a47110f3d} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$\+::is\+\_\+empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the queue is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_static_circular_queue_a92481141cff5f978f1bd861ed0380cf4}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}!is\_full@{is\_full}}
+\index{is\_full@{is\_full}!StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_full()}{is\_full()}}
+{\footnotesize\ttfamily \label{class_static_circular_queue_a92481141cff5f978f1bd861ed0380cf4} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$\+::is\+\_\+full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the queue is full. 
+
+\begin{DoxyReturn}{Returns}
+True if the queue is full, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_static_circular_queue_ad18b5ea0ae77fa4691dbdbc0ec4b8703}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_static_circular_queue_ad18b5ea0ae77fa4691dbdbc0ec4b8703} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$ \& \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The queue to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the assigned queue. 
+\end{DoxyReturn}
+\Hypertarget{class_static_circular_queue_ad8292dbd692ae10829ae2a0610614c0d}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_static_circular_queue_ad8292dbd692ae10829ae2a0610614c0d} 
+template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides access to the front element of the queue. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the front element. 
+\end{DoxyReturn}
+\Hypertarget{class_static_circular_queue_ad7b9a681054beb4b986ed3aec7cf3aed}\index{StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!StaticCircularQueue$<$ T $>$@{StaticCircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_static_circular_queue_ad7b9a681054beb4b986ed3aec7cf3aed} 
+template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{class_static_circular_queue}{Static\+Circular\+Queue}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides access to the front element of the queue (const version). 
+
+\begin{DoxyReturn}{Returns}
+A const reference to the front element. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Static\+Circular\+Queue.\+hpp\end{DoxyCompactItemize}

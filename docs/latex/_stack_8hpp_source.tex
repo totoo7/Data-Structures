@@ -1,0 +1,27 @@
+\doxysection{Stack.\+hpp}
+\hypertarget{_stack_8hpp_source}{}\label{_stack_8hpp_source}\index{Stack.hpp@{Stack.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STACK\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STACK\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_stack}{Stack}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_stack_aeecf178c7865fa4957798a0f5d7e1686}{size}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ data.size();\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_stack_a22739f1a314ccd6e85c4d268acaecbbe}{is\_empty}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ data.empty();\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_stack_ac9aea402f2adaf92ab94b8774f73e63a}{pop\_back}}()\ \{\ data.pop\_back();\ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_stack_aac68ee0464aead506c8d0b717f68ee50}{push\_back}}(\textcolor{keyword}{const}\ T\&\ val)\ \{\ data.push\_back(val);\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{class_stack_aac41d3f899417091befdceaa2753665f}{peek}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ data.back();\ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ T\&\ \mbox{\hyperlink{class_stack_aded92fe72b4b10c992a591c434a43b18}{peek}}()\ \{\ \textcolor{keywordflow}{return}\ data.back();\ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ vector<T>\ data;}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

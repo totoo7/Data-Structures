@@ -1,0 +1,181 @@
+\doxysection{Linked\+Queue\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_linked_queue}{}\label{class_linked_queue}\index{LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}}
+
+
+A generic implementation of a linked queue data structure.  
+
+
+
+
+{\ttfamily \#include $<$Linked\+Queue.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_linked_queue_a2429b31e8bdbf840f5fcc80ff1319b11}{Linked\+Queue}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates an empty queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_linked_queue_a5fc1fdff1f70b9670abfb8e2f6687b78}{Linked\+Queue}} (const \mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. Creates a deep copy of another queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$ \& \mbox{\hyperlink{class_linked_queue_a092a722336ece57317163b15e124eb6e}{operator=}} (const \mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. Assigns the contents of another queue to this one. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_queue_a49f8da542c9b1a54d808f404d7cc55bf}{enqueue}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Adds an element to the end of the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_queue_a16aba596aed65b385216ff85cb9bc302}{dequeue}} ()
+\begin{DoxyCompactList}\small\item\em Removes the front element from the queue. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_linked_queue_a6d4fb77512085952ee16f81ec91b5ef2}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Provides access to the front element of the queue. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{class_linked_queue_aa91a6338b64ff4595fc6ccc9af23bc44}{peek}} () const
+\begin{DoxyCompactList}\small\item\em Provides access to the front element of the queue (const version). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_linked_queue_a5e2f1e2079606e67f53039d55e845656}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the queue is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_linked_queue_ad84250d452864b16e000f4d1ee6295f6}{\texorpdfstring{$\sim$}{\string~}\+Linked\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Frees all dynamically allocated nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Linked\+Queue$<$ T $>$}
+A generic implementation of a linked queue data structure. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the queue. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_linked_queue_a2429b31e8bdbf840f5fcc80ff1319b11}\index{LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}!LinkedQueue@{LinkedQueue}}
+\index{LinkedQueue@{LinkedQueue}!LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedQueue()}{LinkedQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_queue_a2429b31e8bdbf840f5fcc80ff1319b11} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$\mbox{\hyperlink{class_linked_queue}{\+::\+Linked\+Queue}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. Creates an empty queue. 
+
+\Hypertarget{class_linked_queue_a5fc1fdff1f70b9670abfb8e2f6687b78}\index{LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}!LinkedQueue@{LinkedQueue}}
+\index{LinkedQueue@{LinkedQueue}!LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedQueue()}{LinkedQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_queue_a5fc1fdff1f70b9670abfb8e2f6687b78} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$\mbox{\hyperlink{class_linked_queue}{\+::\+Linked\+Queue}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. Creates a deep copy of another queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The queue to copy from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_linked_queue_ad84250d452864b16e000f4d1ee6295f6}\index{LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}!````~LinkedQueue@{\texorpdfstring{$\sim$}{\string~}LinkedQueue}}
+\index{````~LinkedQueue@{\texorpdfstring{$\sim$}{\string~}LinkedQueue}!LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LinkedQueue()}{\string~LinkedQueue()}}
+{\footnotesize\ttfamily \label{class_linked_queue_ad84250d452864b16e000f4d1ee6295f6} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_linked_queue}{Linked\+Queue}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. Frees all dynamically allocated nodes. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_linked_queue_a16aba596aed65b385216ff85cb9bc302}\index{LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily \label{class_linked_queue_a16aba596aed65b385216ff85cb9bc302} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$\+::dequeue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the front element from the queue. 
+
+\Hypertarget{class_linked_queue_a5e2f1e2079606e67f53039d55e845656}\index{LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{class_linked_queue_a5e2f1e2079606e67f53039d55e845656} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the queue is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_queue_a49f8da542c9b1a54d808f404d7cc55bf}\index{LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily \label{class_linked_queue_a49f8da542c9b1a54d808f404d7cc55bf} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$\+::enqueue (\begin{DoxyParamCaption}\item[{const T \&}]{val}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an element to the end of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to enqueue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_linked_queue_a092a722336ece57317163b15e124eb6e}\index{LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_linked_queue_a092a722336ece57317163b15e124eb6e} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$ \& \mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy assignment operator. Assigns the contents of another queue to this one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The queue to copy from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the updated queue. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_queue_a6d4fb77512085952ee16f81ec91b5ef2}\index{LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_linked_queue_a6d4fb77512085952ee16f81ec91b5ef2} 
+template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides access to the front element of the queue. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the front element. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_queue_aa91a6338b64ff4595fc6ccc9af23bc44}\index{LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!LinkedQueue$<$ T $>$@{LinkedQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_linked_queue_aa91a6338b64ff4595fc6ccc9af23bc44} 
+template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{class_linked_queue}{Linked\+Queue}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides access to the front element of the queue (const version). 
+
+\begin{DoxyReturn}{Returns}
+A const reference to the front element. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Linked\+Queue.\+hpp\end{DoxyCompactItemize}
