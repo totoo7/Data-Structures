@@ -4,23 +4,85 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief A generic implementation of a linked stack data structure.
+ * 
+ * @tparam T The type of elements stored in the stack.
+ */
 template <typename T>
 class LinkedStack {
     public:
+        /**
+         * @brief Default constructor.
+         */
         LinkedStack() = default;
+        /**
+         * @brief Copy constructor.
+         * 
+         * @param rhs The stack to copy from.
+         */
         LinkedStack(const LinkedStack<T>& rhs);
+        /**
+         * @brief Copy assignment operator.
+         * 
+         * @param rhs The stack to assign from.
+         * @return A reference to the assigned stack.
+         */
         LinkedStack<T>& operator=(const LinkedStack<T>& rhs);
+        /**
+         * @brief Returns the number of elements in the stack.
+         * 
+         * @return The size of the stack.
+         */
         int size() const;
+        /**
+         * @brief Checks if the stack is empty.
+         * 
+         * @return True if the stack is empty, false otherwise.
+         */
         bool is_empty() const;
+        /**
+         * @brief Provides access to the top element of the stack.
+         * 
+         * @return A reference to the top element.
+         */
         T& peek();
+        /**
+         * @brief Provides access to the top element of the stack (const version).
+         * 
+         * @return A const reference to the top element.
+         */
         const T& peek() const;
+        /**
+         * @brief Pushes an element onto the stack.
+         * 
+         * @param val The value to push onto the stack.
+         */
         void push_back(const T& val);
+        /**
+         * @brief Removes the top element from the stack.
+         * 
+         */
         void pop_back();
+        /**
+         * @brief Destructor that clears the stack and releases memory.
+         */
         ~LinkedStack();
     private:
+        /**
+         * @brief Clears the stack, releasing all allocated memory.
+         */
         void clear();
+        /**
+         * @brief Copies the elements from another stack.
+         * 
+         * @param rhs The stack to copy from.
+         */
         void copy(const LinkedStack<T>& rhs);
     private:
+        /**
+         * @brief A structure representing a node in the linked stack.
+         */
         struct Node {
             T data;
             Node* next = nullptr;

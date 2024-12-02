@@ -4,18 +4,67 @@
 #include <iostream>
 using namespace std;
 template<typename T>
+
+/**
+ * @brief A generic implementation of a linked queue data structure.
+ * 
+ * @tparam T The type of elements stored in the queue.
+ */
 class LinkedQueue {
     public:
+        /**
+         * @brief Default constructor. Creates an empty queue.
+         */
         LinkedQueue()=default;
+        /**
+         * @brief Copy constructor. Creates a deep copy of another queue.
+         * 
+         * @param rhs The queue to copy from.
+         */
         LinkedQueue(const LinkedQueue<T>& rhs);
+        /**
+         * @brief Copy assignment operator. Assigns the contents of another queue to this one.
+         * 
+         * @param rhs The queue to copy from.
+         * @return A reference to the updated queue.
+         */
         LinkedQueue<T>& operator=(const LinkedQueue<T>& rhs);
+        /**
+         * @brief Adds an element to the end of the queue.
+         * 
+         * @param val The value to enqueue.
+         */
         void enqueue(const T& val); 
+        /**
+         * @brief Removes the front element from the queue.
+         */
         void dequeue();
+        /**
+         * @brief Provides access to the front element of the queue.
+         * 
+         * @return A reference to the front element.
+         */
         T& peek();
+        /**
+         * @brief Provides access to the front element of the queue (const version).
+         * 
+         * @return A const reference to the front element.
+         */
         const T& peek() const;
+        /**
+         * @brief Checks if the queue is empty.
+         * 
+         * @return True if the queue is empty, false otherwise.
+         */
         bool empty() const;
+        /**
+         * @brief Destructor. Frees all dynamically allocated nodes.
+         */
         ~LinkedQueue();
     private:
+        /**
+         * @brief Represents a single node in the queue.
+         */
         struct Node {
             Node* next = nullptr;
             T data;
@@ -24,7 +73,16 @@ class LinkedQueue {
         Node* last = nullptr;
         int count = 0;
     private:
+        /**
+         * @brief Removes all elements from the queue.
+         */
         void clear();
+        /**
+         * @brief Swaps the contents of two node pointers.
+         * 
+         * @param a A reference to the first node pointer.
+         * @param b A reference to the second node pointer.
+         */
         void swap(Node*& first, Node*& last);
         
 };
