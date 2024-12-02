@@ -1,68 +1,241 @@
+/**
+ * @file LinkedList.hpp
+ * @brief Templated singly linked list implementation with iterators.
+ * 
+ * This header file defines a generic `LinkedList` class that provides
+ * functionality for creating and managing a singly linked list. It includes
+ * support for forward iteration, element access, and various list operations.
+ */
+
 #ifndef LINKED_LIST_HPP
 #define LINKED_LIST_HPP
 
 #include <iostream>
 using namespace std;
 
+/**
+ * @class LinkedList
+ * @brief A templated singly linked list class.
+ * 
+ * This class provides methods for managing a list of elements, supporting
+ * basic operations such as insertion, deletion, and traversal.
+ * 
+ * @tparam T Type of the elements stored in the list.
+ */
 template<typename T>
 class LinkedList {
     private:
+        /**
+         * @struct Node
+         * @brief Represents a single node in the linked list.
+         * 
+         * Each node stores a value and a pointer to the next node.
+         */    
         struct Node {
             Node* next = nullptr;
             T data;
+            /**
+             * @brief Constructs a Node with data and a pointer to the next node.
+             * 
+             * @param next_val Pointer to the next node.
+             * @param data_val Data value to store in the node.
+             */
             Node(Node* next_val, T data_val) : next(next_val), data(data_val) {}
         };
     public:
+        /**
+         * @class Iterator
+         * @brief Iterator for traversing the linked list.
+         */
         class Iterator {
             public:
-                T& operator*();
+                /**
+                 * @brief Dereferences the iterator to access the element.
+                 * @return Reference to the element.
+                 */
+                T& operator*();                
+                /**
+                 * @brief Dereferences the iterator to access the element (const version).
+                 * @return Const reference to the element.
+                 */
                 const T& operator*() const;
+                /**
+                 * @brief Accesses the element via pointer.
+                 * @return Pointer to the element.
+                 */
                 T* operator->();
+                /**
+                 * @brief Accesses the element via pointer (const version).
+                 * @return Const pointer to the element.
+                 */
                 const T* operator->() const;
+                /**
+                 * @brief Pre-increment operator to move to the next element.
+                 * @return Reference to the updated iterator.
+                 */
                 Iterator& operator++();
+                /**
+                 * @brief Post-increment operator to move to the next element.
+                 * @return Copy of the iterator before incrementing.
+                 */
                 Iterator operator++(int);
+                /**
+                 * @brief Compares two iterators for inequality.
+                 * @param rhs Iterator to compare with.
+                 * @return `true` if the iterators are not equal, `false` otherwise.
+                 */
                 bool operator!=(const Iterator& rhs) const;
+                /**
+                 * @brief Compares two iterators for equality.
+                 * @param rhs Iterator to compare with.
+                 * @return `true` if the iterators are equal, `false` otherwise.
+                 */
                 bool operator==(const Iterator& rhs) const;
                 friend class LinkedList<T>;
             protected:
+                /**
+                 * @brief Constructs an iterator pointing to a specific node.
+                 * @param node Pointer to the node.
+                 */
                 Iterator(LinkedList<T>::Node* node);
             protected:
                 LinkedList<T>::Node* pointer;
         };
     public:
+        /**
+         * @brief Default constructor.
+         * Initializes an empty linked list.
+         */
         LinkedList()=default;
+        /**
+         * @brief Copy constructor.
+         * Copies the content of another linked list.
+         * @param rhs LinkedList to copy.
+         */
         LinkedList(const LinkedList<T>& rhs);
+        /**
+         * @brief Assignment operator.
+         * Replaces the content with another linked list's content.
+         * @param rhs LinkedList to copy.
+         * @return Reference to the updated linked list.
+         */
         LinkedList<T>& operator=(const LinkedList<T>& rhs);
+        /**
+         * @brief Accesses the first element.
+         * @return Reference to the first element.
+         */
         T& front();
+        /**
+         * @brief Accesses the first element (const version).
+         * @return Const reference to the first element.
+         */
         const T& front() const;
+        /**
+         * @brief Accesses the last element.
+         * @return Reference to the last element.
+         */
         T& back();
+        /**
+         * @brief Accesses the last element (const version).
+         * @return Const reference to the last element.
+         */
         const T& back() const;
+        /**
+         * @brief Accesses an element at a specific index.
+         * @param index Index of the element.
+         * @return Reference to the element.
+         */
         T& at(size_t index);
+        /**
+         * @brief Accesses an element at a specific index (const version).
+         * @param index Index of the element.
+         * @return Const reference to the element.
+         */
         const T& at(size_t index) const;
+        /**
+         * @brief Checks if the linked list is empty.
+         * @return `true` if the list is empty, `false` otherwise.
+         */
         bool is_empty() const;
+        /**
+         * @brief Returns the number of elements in the linked list.
+         * @return Size of the linked list.
+         */
         size_t size() const;
+        /**
+         * @brief Inserts an element at the front of the list.
+         * @param val Element to insert.
+         */
         void push_front(const T& val);
+        /**
+         * @brief Inserts an element at the end of the list.
+         * @param val Element to insert.
+         */
         void push_end(const T& val);
+        /**
+         * @brief Inserts an element at a specific index.
+         * @param index Index to insert the element at.
+         * @param val Element to insert.
+         */
         void push_at(size_t index, const T& val);
+        /**
+         * @brief Inserts an element after a specific iterator.
+         * @param iter Iterator pointing to the position after which to insert.
+         * @param val Element to insert.
+         */
         void push_after(Iterator iter, const T& val);
+        /**
+         * @brief Removes the first element from the list.
+         */
         void pop_front();
+        /**
+         * @brief Removes the last element from the list.
+         */
         void pop_end();
+        /**
+         * @brief Removes an element at a specific index.
+         * @param index Index of the element to remove.
+         */
         void pop_at(size_t index);
+        /**
+         * @brief Removes an element after a specific iterator.
+         * @param iter Iterator pointing to the position after which to remove.
+         */
         void pop_after(Iterator iter);
+        /**
+         * @brief Returns an iterator to the first element.
+         * @return Iterator to the first element.
+         */
         Iterator begin();
+        /**
+         * @brief Returns an iterator to the end (past-the-last element).
+         * @return Iterator to the end.
+         */
         Iterator end();
+        /**
+         * @brief Returns a const iterator to the first element.
+         * @return Const iterator to the first element.
+         */
         const Iterator c_begin() const;
+        /**
+         * @brief Returns a const iterator to the end (past-the-last element).
+         * @return Const iterator to the end.
+         */
         const Iterator c_end() const;
         void append(const LinkedList<T>& rhs);
         void reverse();
         void sort();
         bool is_sorted() const;
+        /**
+         * @brief Destructor. Cleans up all resources used by the linked list.
+         */
         ~LinkedList();
     private: 
         Node* head = nullptr;
         Node* tail = nullptr;
         size_t count = 0;
     private: 
+        // Utility functions
         void swap(Node*& a, Node*& b);
         void clear();
 };
