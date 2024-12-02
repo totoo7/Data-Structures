@@ -9,6 +9,10 @@ find_package(Catch2 3 REQUIRED)
 set(sources 
   test/test_deque.cpp
   test/test_doubly_linked_list.cpp  
+  test/test_linked_list.cpp
+  test/test_linked_queue.cpp
+  test/test_queue.cpp
+  test/test_static_circular_queue.cpp
 )
 
 add_executable(tests ${sources})

@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "Queue/Deque.hpp" // Adjust the include path as per your project structure
+#include "Queue/Deque.hpp"
 
 TEST_CASE("Deque") {
     SECTION("Constructor creates an empty deque") {

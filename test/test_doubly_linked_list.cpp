@@ -59,13 +59,13 @@ TEST_CASE("DoublyLinkedList") {
         list.push_back(3);
 
         auto it = list.begin();
-        ++it;  // Move to the second element
+        ++it;
         list.insert(it, 2);
 
         REQUIRE(list.size() == 3);
         REQUIRE(list.front() == 1);
         REQUIRE(list.back() == 3);
-        REQUIRE(*(++list.begin()) == 2);  // Iterator points to 2
+        REQUIRE(*(++list.begin()) == 2);
     }
 
     SECTION("remove removes elements at a specific position") {
@@ -75,7 +75,7 @@ TEST_CASE("DoublyLinkedList") {
         list.push_back(3);
 
         auto it = list.begin();
-        ++it;  // Move to the second element
+        ++it;
         list.remove(it);
 
         REQUIRE(list.size() == 2);
@@ -132,7 +132,7 @@ TEST_CASE("DoublyLinkedList") {
         list.push_back(2);
 
         auto it = list.end();
-        REQUIRE(it == list.end());  // It should be the sentinel node
+        REQUIRE(it == list.end());
     }
 
     SECTION("iterator moves correctly") {
@@ -212,7 +212,7 @@ TEST_CASE("DoublyLinkedList") {
         auto it2 = list.begin();
         auto it3 = list.end();
 
-        REQUIRE(it1 == it2); // Same position
-        REQUIRE(it1 != it3); // Different position
+        REQUIRE(it1 == it2);
+        REQUIRE(it1 != it3);
     }
 }

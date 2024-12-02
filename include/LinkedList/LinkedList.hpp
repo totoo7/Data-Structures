@@ -91,14 +91,14 @@ class LinkedList {
                  * @return `true` if the iterators are equal, `false` otherwise.
                  */
                 bool operator==(const Iterator& rhs) const;
+            private:
                 friend class LinkedList<T>;
-            protected:
                 /**
                  * @brief Constructs an iterator pointing to a specific node.
                  * @param node Pointer to the node.
                  */
                 Iterator(LinkedList<T>::Node* node);
-            protected:
+            private:
                 LinkedList<T>::Node* pointer;
         };
     public:
@@ -264,13 +264,13 @@ inline const T* LinkedList<T>::Iterator::operator->() const {
 }
 
 template<typename T>
-inline LinkedList<T>::Iterator& LinkedList<T>::Iterator::operator++() {
+inline typename LinkedList<T>::Iterator& LinkedList<T>::Iterator::operator++() {
     pointer = pointer->next;
     return *this;
 }
 
 template<typename T>
-inline LinkedList<T>::Iterator LinkedList<T>::Iterator::operator++(int) {
+inline typename LinkedList<T>::Iterator LinkedList<T>::Iterator::operator++(int) {
     Iterator temp(*this);
     ++(*this);
     return temp;
@@ -278,12 +278,12 @@ inline LinkedList<T>::Iterator LinkedList<T>::Iterator::operator++(int) {
 
 template<typename T>
 inline bool LinkedList<T>::Iterator::operator!=(const Iterator& rhs) const {
-    return pointer == rhs.pointer;
+    return !(*this == rhs);
 }
 
 template<typename T>
 inline bool LinkedList<T>::Iterator::operator==(const Iterator& rhs) const {
-    return !(*this == rhs);
+    return pointer == rhs.pointer;
 }
 
 template<typename T>
@@ -434,22 +434,22 @@ inline void LinkedList<T>::pop_after(Iterator iter) {
 }
 
 template<typename T>
-inline LinkedList<T>::Iterator LinkedList<T>::begin() {
+inline typename LinkedList<T>::Iterator LinkedList<T>::begin() {
     return LinkedList<T>::Iterator(head);
 }
 
 template<typename T>
-inline LinkedList<T>::Iterator LinkedList<T>::end() {
+inline typename LinkedList<T>::Iterator LinkedList<T>::end() {
     return LinkedList<T>::Iterator(nullptr);
 }
 
 template<typename T>
-inline const LinkedList<T>::Iterator LinkedList<T>::c_begin() const {
+inline typename LinkedList<T>::Iterator const LinkedList<T>::c_begin() const {
     return LinkedList<T>::Iterator(head);
 }
 
 template<typename T>
-inline const LinkedList<T>::Iterator LinkedList<T>::c_end() const {
+inline typename LinkedList<T>::Iterator const LinkedList<T>::c_end() const {
     return LinkedList<T>::Iterator(nullptr);
 }
 
