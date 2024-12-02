@@ -289,19 +289,11 @@ inline DoublyLinkedList<T>::DoublyLinkedList(const DoublyLinkedList<T>& rhs) {
 template<typename T>
 inline DoublyLinkedList<T>& DoublyLinkedList<T>::operator=(const DoublyLinkedList<T>& rhs) {
     if (this == &rhs) return *this;
-    DoublyLinkedList<T> temp(rhs);
-
-    std::swap(sentinel.next, temp.sentinel.next);
-    std::swap(sentinel.prev, temp.sentinel.prev);
-
-    if (sentinel.next != &sentinel) sentinel.next->prev = &sentinel;
-    if (sentinel.prev != &sentinel) sentinel.prev->next = &sentinel;
-
-    if (temp.sentinel.next != &temp.sentinel) temp.sentinel.next->prev = &temp.sentinel;
-    if (temp.sentinel.prev != &temp.sentinel) temp.sentinel.prev->next = &temp.sentinel;
-
-    std::swap(count, temp.count);
-
+    DoublyLinkedList<T> temp = rhs;
+    while (!empty()) pop_back();
+    for (Node* curr = temp.sentinel.next; curr != &temp.sentinel; curr = curr->next) {
+            push_back(curr->data);
+    }
     return *this;
 }
 

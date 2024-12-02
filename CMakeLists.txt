@@ -6,7 +6,12 @@ target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_SOURCE_DIR}/include
 
 find_package(Catch2 3 REQUIRED)
 
-add_executable(tests test/test_deque.cpp)
+set(sources 
+  test/test_deque.cpp
+  test/test_doubly_linked_list.cpp  
+)
+
+add_executable(tests ${sources})
 target_include_directories(tests PRIVATE ${CMAKE_SOURCE_DIR}/include)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
 
