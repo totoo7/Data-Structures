@@ -13,6 +13,7 @@ set(sources
   test/test_linked_queue.cpp
   test/test_queue.cpp
   test/test_static_circular_queue.cpp
+  test/test_vector.cpp
 )
 
 add_executable(tests ${sources})
