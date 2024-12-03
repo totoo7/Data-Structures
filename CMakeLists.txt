@@ -14,6 +14,9 @@ set(sources
   test/test_queue.cpp
   test/test_static_circular_queue.cpp
   test/test_vector.cpp
+  test/test_linked_stack.cpp
+  test/test_static_stack.cpp
+  test/test_stack.cpp
 )
 
 add_executable(tests ${sources})

@@ -48,8 +48,8 @@
 \DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{class_vector_a314b19cea6ad9ce76457e24ac8264bd8}{operator[]}}(\textcolor{keywordtype}{size\_t}\ index)\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vector_1_1_iterator}{Iterator}}\ \mbox{\hyperlink{class_vector_a02015f2f7f6eba0a8f16666a1374b287}{begin}}();}
 \DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vector_1_1_iterator}{Iterator}}\ \mbox{\hyperlink{class_vector_a38087cdcade4d595140d53cc011f9cff}{end}}();}
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Iterator}}\ \mbox{\hyperlink{class_vector_a92a9958dcf59dd831ea6d73e5b3166a4}{c\_begin}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Iterator}}\ \mbox{\hyperlink{class_vector_a320744a5da9630b4058bea0f3ae44c8c}{c\_end}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Iterator}}\ \mbox{\hyperlink{class_vector_a028801aecd28f4eab99913030c073b4b}{c\_begin}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Iterator}}\ \mbox{\hyperlink{class_vector_a42755c9aace5aa97cfb747e676d6b235}{c\_end}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vector_afd524fac19e6d3d69db5198ffe2952b0}{\string~Vector}}();}
 \DoxyCodeLine{00197\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ clear();}
@@ -93,13 +93,13 @@
 \DoxyCodeLine{00244\ \}}
 \DoxyCodeLine{00245\ }
 \DoxyCodeLine{00246\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00247\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\&\ \mbox{\hyperlink{class_vector_1_1_iterator_af8446d4aa9660c6912ed0352acb9659e}{Vector<T>::Iterator::operator++}}()\ \{}
+\DoxyCodeLine{00247\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\&\ \mbox{\hyperlink{class_vector_1_1_iterator_af8446d4aa9660c6912ed0352acb9659e}{Vector<T>::Iterator::operator++}}()\ \{}
 \DoxyCodeLine{00248\ \ \ \ \ ++index;}
 \DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00250\ \}}
 \DoxyCodeLine{00251\ }
 \DoxyCodeLine{00252\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00253\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\ \mbox{\hyperlink{class_vector_1_1_iterator_af8446d4aa9660c6912ed0352acb9659e}{Vector<T>::Iterator::operator++}}(\textcolor{keywordtype}{int})\ \{}
+\DoxyCodeLine{00253\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\ \mbox{\hyperlink{class_vector_1_1_iterator_af8446d4aa9660c6912ed0352acb9659e}{Vector<T>::Iterator::operator++}}(\textcolor{keywordtype}{int})\ \{}
 \DoxyCodeLine{00254\ \ \ \ \ \mbox{\hyperlink{class_vector_1_1_iterator}{Iterator}}\ temp(*\textcolor{keyword}{this});}
 \DoxyCodeLine{00255\ \ \ \ \ ++(*this);}
 \DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{return}\ temp;}
@@ -224,22 +224,22 @@
 \DoxyCodeLine{00375\ \}}
 \DoxyCodeLine{00376\ }
 \DoxyCodeLine{00377\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00378\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\ \mbox{\hyperlink{class_vector_a02015f2f7f6eba0a8f16666a1374b287}{Vector<T>::begin}}()\ \{}
+\DoxyCodeLine{00378\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\ \mbox{\hyperlink{class_vector_a02015f2f7f6eba0a8f16666a1374b287}{Vector<T>::begin}}()\ \{}
 \DoxyCodeLine{00379\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}(\textcolor{keyword}{this},\ 0);}
 \DoxyCodeLine{00380\ \}}
 \DoxyCodeLine{00381\ }
 \DoxyCodeLine{00382\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00383\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\ \mbox{\hyperlink{class_vector_a38087cdcade4d595140d53cc011f9cff}{Vector<T>::end}}()\ \{}
+\DoxyCodeLine{00383\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\ \mbox{\hyperlink{class_vector_a38087cdcade4d595140d53cc011f9cff}{Vector<T>::end}}()\ \{}
 \DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}(\textcolor{keyword}{this},\ count);}
 \DoxyCodeLine{00385\ \}}
 \DoxyCodeLine{00386\ }
 \DoxyCodeLine{00387\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00388\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\ \mbox{\hyperlink{class_vector_a92a9958dcf59dd831ea6d73e5b3166a4}{Vector<T>::c\_begin}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00388\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector_a028801aecd28f4eab99913030c073b4b}{Vector<T>::c\_begin}}()\textcolor{keyword}{\ const\ }\{}
 \DoxyCodeLine{00389\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}(\textcolor{keyword}{this},\ 0);}
 \DoxyCodeLine{00390\ \}}
 \DoxyCodeLine{00391\ }
 \DoxyCodeLine{00392\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00393\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\ \mbox{\hyperlink{class_vector_a320744a5da9630b4058bea0f3ae44c8c}{Vector<T>::c\_end}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00393\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector_a42755c9aace5aa97cfb747e676d6b235}{Vector<T>::c\_end}}()\textcolor{keyword}{\ const\ }\{}
 \DoxyCodeLine{00394\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_vector_1_1_iterator}{Vector<T>::Iterator}}(\textcolor{keyword}{this},\ count);}
 \DoxyCodeLine{00395\ \}}
 \DoxyCodeLine{00396\ }

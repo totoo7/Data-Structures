@@ -28,16 +28,6 @@ bool \mbox{\hyperlink{class_linked_list_1_1_iterator_aaddf50ca250e846b7d913c3111
 \begin{DoxyCompactList}\small\item\em Compares two iterators for inequality. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_linked_list_1_1_iterator_a29b95ca6470c51c7a2faff44706855c3}{operator==}} (const \mbox{\hyperlink{class_linked_list_1_1_iterator}{Iterator}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em Compares two iterators for equality. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_linked_list_1_1_iterator_a928058ee67d24460f6fb2cc135491d83}{Iterator}} (\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Node \texorpdfstring{$\ast$}{*}node)
-\begin{DoxyCompactList}\small\item\em Constructs an iterator pointing to a specific node. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Node \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list_1_1_iterator_aabc525d88674bd09174fea75dd6e5f9c}{pointer}}
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,25 +39,6 @@ class \mbox{\hyperlink{class_linked_list_1_1_iterator_a1598265399225902707369edc
 \subsubsection*{template$<$typename T$>$\newline
 class Linked\+List$<$ T $>$\+::\+Iterator}
 \doxylink{class_linked_list_1_1_iterator}{Iterator} for traversing the linked list. 
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_linked_list_1_1_iterator_a928058ee67d24460f6fb2cc135491d83}\index{LinkedList$<$ T $>$::Iterator@{LinkedList$<$ T $>$::Iterator}!Iterator@{Iterator}}
-\index{Iterator@{Iterator}!LinkedList$<$ T $>$::Iterator@{LinkedList$<$ T $>$::Iterator}}
-\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}}
-{\footnotesize\ttfamily \label{class_linked_list_1_1_iterator_a928058ee67d24460f6fb2cc135491d83} 
-template$<$typename T $>$ \\
-\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Node \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
-
-
-
-Constructs an iterator pointing to a specific node. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em node} & Pointer to the node. \\
-\hline
-\end{DoxyParams}
-
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_linked_list_1_1_iterator_aaddf50ca250e846b7d913c3111fbfb0f}\index{LinkedList$<$ T $>$::Iterator@{LinkedList$<$ T $>$::Iterator}!operator"!=@{operator"!=}}
@@ -122,7 +93,7 @@ Const reference to the element.
 \doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{class_linked_list_1_1_iterator_a6810ca3af056a0433185d105d288bc21} 
 template$<$typename T $>$ \\
-\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\mbox{\hyperlink{class_linked_list_1_1_iterator_a928058ee67d24460f6fb2cc135491d83}{\+::\+Iterator}} \& \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator++ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Iterator \& \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator++ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -136,7 +107,7 @@ Reference to the updated iterator.
 \doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \label{class_linked_list_1_1_iterator_aea12400347204394e58469233ee5f570} 
 template$<$typename T $>$ \\
-\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\mbox{\hyperlink{class_linked_list_1_1_iterator_a928058ee67d24460f6fb2cc135491d83}{\+::\+Iterator}} \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Iterator \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -201,16 +172,6 @@ Compares two iterators for equality.
 {\footnotesize\ttfamily \label{class_linked_list_1_1_iterator_a1598265399225902707369edc915e3d2} 
 template$<$typename T $>$ \\
 friend class \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\hspace{0.3cm}{\ttfamily [friend]}}
-
-
-
-\doxysubsection{Member Data Documentation}
-\Hypertarget{class_linked_list_1_1_iterator_aabc525d88674bd09174fea75dd6e5f9c}\index{LinkedList$<$ T $>$::Iterator@{LinkedList$<$ T $>$::Iterator}!pointer@{pointer}}
-\index{pointer@{pointer}!LinkedList$<$ T $>$::Iterator@{LinkedList$<$ T $>$::Iterator}}
-\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
-{\footnotesize\ttfamily \label{class_linked_list_1_1_iterator_aabc525d88674bd09174fea75dd6e5f9c} 
-template$<$typename T $>$ \\
-\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$T$>$\+::\+Node\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\+Iterator\+::pointer\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

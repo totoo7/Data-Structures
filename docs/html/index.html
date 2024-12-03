@@ -90,78 +90,14 @@ $(function(){ initResizable(false); });
 <div class="textblock"><p><a class="anchor" id="md__2_users_2macbookpro_2_programming_2_data-_structures_2_r_e_a_d_m_e"></a></p>
 <p>This repository contains a collection of fundamental data structures implemented in C++ with a focus on efficiency, flexibility, and clear understanding. The project is structured as a CMake-based library, making it easy to integrate into other C++ projects or build and test independently.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Data Structures Included</h1>
-<p>This library provides implementations of the following data structures:</p>
-<h2><a class="anchor" id="autotoc_md2"></a>
-1. <b>Vector</b></h2>
-<ul>
-<li>A dynamic array-like container, implemented with templates to support any data type.</li>
-<li>Includes functionalities like <code>push_back</code>, <code>pop_back</code>, <code>operator[]</code>, and iterators for easy traversal.</li>
-<li>Dynamically resizes itself when the capacity is exceeded.</li>
-<li>Supports copy constructor, assignment operator, and deep copying to manage memory safely.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
-2. <b>LinkedList</b></h2>
-<ul>
-<li>A basic linked list implementation supporting insertion and removal of nodes from both ends.</li>
-<li>Includes functionalities like <code>push_back</code>, <code>push_front</code>, <code>pop_back</code>, <code>pop_front</code>, and iteration support via custom iterators.</li>
-<li>Memory management is handled with dynamic allocation/deallocation.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md4"></a>
-3. <b>DoublyLinkedList</b></h2>
-<ul>
-<li>An enhanced version of the <code><a class="el" href="class_linked_list.html" title="A templated singly linked list class.">LinkedList</a></code> where each node has pointers to both the next and previous elements.</li>
-<li>Provides efficient access to both ends of the list and supports operations like <code>insert_after</code>, <code>insert_before</code>, and deletion from any position in the list.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md5"></a>
-4. <b>Queue (Implemented with <code>std::vector</code>)</b></h2>
-<ul>
-<li>A queue implemented using a <code>std::vector</code> to store elements.</li>
-<li>Supports <code>enqueue</code> and <code>dequeue</code> operations.</li>
-<li>Efficient resizing and management of the underlying container.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md6"></a>
-5. <b>StaticQueue (Static Circular Queue)</b></h2>
-<ul>
-<li>A queue with a fixed size, implemented as a circular buffer.</li>
-<li>Operations like <code>enqueue</code> and <code>dequeue</code> are efficiently handled, with no resizing needed.</li>
-<li>A perfect choice for memory-constrained environments.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md7"></a>
-6. <b>LinkedQueue</b></h2>
-<ul>
-<li>A queue implemented using linked nodes, where each node points to the next one.</li>
-<li>Supports <code>enqueue</code> and <code>dequeue</code> operations, with dynamic resizing of the structure.</li>
-<li>Ensures that the queue operations are efficient, with no need for resizing.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md8"></a>
-7. <b>Stack (Implemented with <code>std::vector</code>)</b></h2>
-<ul>
-<li>A stack data structure that uses <code>std::vector</code> as the underlying container.</li>
-<li>Provides standard stack operations: <code>push</code>, <code>pop</code>, and <code>top</code>.</li>
-<li>Dynamically resizes itself as needed, with efficient memory usage.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md9"></a>
-8. <b>StaticStack</b></h2>
-<ul>
-<li>A stack with a fixed size, implemented using a static array.</li>
-<li>Supports <code>push</code>, <code>pop</code>, and <code>top</code> operations.</li>
-<li>Suitable for cases where the stack size is known ahead of time.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md10"></a>
-9. <b>LinkedStack</b></h2>
-<ul>
-<li>A stack implemented using linked nodes, where each node points to the next one.</li>
-<li>Allows for dynamic memory allocation and supports <code>push</code>, <code>pop</code>, and <code>top</code> operations.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md11"></a>
 Key Features</h1>
 <ul>
 <li><b>CMake-based Project</b>: The library is designed to be used with CMake, making it easy to integrate into larger projects.</li>
 <li><b>Template-based Implementations</b>: All data structures are implemented as templates, allowing them to work with any data type.</li>
 <li><b>Memory Management</b>: Uses dynamic memory allocation/deallocation where appropriate to ensure efficient memory use and prevent memory leaks.</li>
 <li><b>Iterators</b>: Some data structures (like <code><a class="el" href="class_vector.html" title="A dynamic array-like container that provides random access to elements.">Vector</a></code>, <code><a class="el" href="class_linked_list.html" title="A templated singly linked list class.">LinkedList</a></code>, and <code><a class="el" href="class_doubly_linked_list.html" title="Implements a doubly linked list with support for iteration, insertion, removal, and traversal.">DoublyLinkedList</a></code>) include iterators to facilitate easy traversal and element access.</li>
-<li><b>Clear and Modular Design</b>: Each data structure is encapsulated in its own header file for clarity, and the library can be expanded with additional data structures as needed. </li>
+<li><b>Clear and Modular Design</b>: Each data structure is encapsulated in its own header file for clarity, and the library can be expanded with additional data structures as needed.</li>
+<li><b>Comprehensive Testing with Catch2</b>: The library includes extensive tests for all data structures using the Catch2 testing framework, ensuring reliability and correctness. </li>
 </ul>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
