@@ -17,6 +17,7 @@ set(sources
   test/test_linked_stack.cpp
   test/test_static_stack.cpp
   test/test_stack.cpp
+  test/test_binary_search_tree.cpp
 )
 
 add_executable(tests ${sources})
