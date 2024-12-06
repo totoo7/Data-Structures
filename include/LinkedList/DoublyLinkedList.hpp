@@ -185,8 +185,6 @@ public:
      * @return Iterator to the sentinel node.
      */
     Iterator end();
-    void splice();
-    void merge();  
     /**
      * @brief Destructor. Cleans up all allocated memory.
      */
