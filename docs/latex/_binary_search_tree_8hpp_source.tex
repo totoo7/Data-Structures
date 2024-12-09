@@ -1,0 +1,39 @@
+\doxysection{Binary\+Search\+Tree.\+hpp}
+\hypertarget{_binary_search_tree_8hpp_source}{}\label{_binary_search_tree_8hpp_source}\index{BinarySearchTree.hpp@{BinarySearchTree.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BINARY\_SEARCH\_TREE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BINARY\_SEARCH\_TREE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_binary_search_tree}{BinarySearchTree}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }Node\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ T\ value;}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ Node*\ left\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ Node*\ right\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ Node*\ root\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ Node*\&\ find(Node*\ n,\ \textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!n)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n-\/>value\ ==\ value)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ <\ n-\/>value)\ \textcolor{keywordflow}{return}\ find(n-\/>left,\ value);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ find(n-\/>right,\ value);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_binary_search_tree_a1d1d5ceb3742c64dfb9a4d8bc3024c16}{find}}(\textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ find(root,\ value);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_binary_search_tree_a66ad0918f4e082a150d011085807f233}{insert}}(\textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ Node*\&\ pos\ =\ find(root,\ value);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ \textcolor{keyword}{new}\ Node;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ pos-\/>value\ =\ value;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

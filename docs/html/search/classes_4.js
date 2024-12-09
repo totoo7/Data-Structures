@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['stack_0',['Stack',['../class_stack.html',1,'']]],
-  ['staticcircularqueue_1',['StaticCircularQueue',['../class_static_circular_queue.html',1,'']]],
-  ['staticstack_2',['StaticStack',['../class_static_stack.html',1,'']]]
+  ['linkedlist_0',['LinkedList',['../class_linked_list.html',1,'']]],
+  ['linkedqueue_1',['LinkedQueue',['../class_linked_queue.html',1,'']]],
+  ['linkedstack_2',['LinkedStack',['../class_linked_stack.html',1,'']]]
 ];

@@ -1,0 +1,129 @@
+\doxysection{Circular\+Queue.\+hpp}
+\hypertarget{_circular_queue_8hpp_source}{}\label{_circular_queue_8hpp_source}\index{CircularQueue.hpp@{CircularQueue.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CIRCULAR\_QUEUE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CIRCULAR\_QUEUE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_circular_queue}{CircularQueue}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_circular_queue_afb497745b3a1e472ec670345328301a3}{CircularQueue}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_circular_queue_afb497745b3a1e472ec670345328301a3}{CircularQueue}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_circular_queue}{CircularQueue<T>}}\&\ rhs);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_circular_queue}{CircularQueue<T>}}\&\ \mbox{\hyperlink{class_circular_queue_ac0af045de476245a188d74511b365e26}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_circular_queue}{CircularQueue<T>}}\&\ rhs);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_circular_queue_a5fac72bb179627325699fb59e61b176f}{empty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circular_queue_ae7bcf22aee9ab5657d29317987660544}{enqueue}}(\textcolor{keyword}{const}\ T\&\ val);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circular_queue_a97dd1750957073c5c75b4aad94332ee2}{dequeue}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ T\&\ \mbox{\hyperlink{class_circular_queue_ae610edcbd73ddc153725b818ca3dba06}{peek}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{class_circular_queue_ae610edcbd73ddc153725b818ca3dba06}{peek}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_circular_queue_ae983345f91859f4d532749f0b44531df}{\string~CircularQueue}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ T*\ data\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ capacity\ =\ 2;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ count\ =\ 0;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ last,\ first\ =\ 0;}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00073\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_circular_queue_afb497745b3a1e472ec670345328301a3}{CircularQueue<T>::CircularQueue}}()\ :\ count(0),\ first(0),\ last(),\ capacity(2)\ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ data\ =\ \textcolor{keyword}{new}\ T[capacity];}
+\DoxyCodeLine{00076\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (std::bad\_alloc\&\ e)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ data;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00083\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_circular_queue_afb497745b3a1e472ec670345328301a3}{CircularQueue<T>::CircularQueue}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_circular_queue}{CircularQueue<T>}}\&\ rhs)\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ data\ =\ \textcolor{keyword}{new}\ T[capacity];}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ count\ =\ rhs.count;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ capacity\ =\ rhs.capacity;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ first\ =\ 0;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ last\ =\ count;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ count;\ i++)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ data[i]\ =\ rhs.data[(i\ +\ rhs.first)\ \%\ capacity];}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (std::bad\_alloc\&\ e)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ data;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00100\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_circular_queue}{CircularQueue<T>}}\&\ \mbox{\hyperlink{class_circular_queue_ac0af045de476245a188d74511b365e26}{CircularQueue<T>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_circular_queue}{CircularQueue<T>}}\&\ rhs)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ ==\ \&rhs)\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{class_circular_queue}{CircularQueue<T>}}\ temp\ =\ rhs;}
+\DoxyCodeLine{00103\ \ \ \ \ std::swap(data,\ temp.data);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ temp\_first\ =\ first;}
+\DoxyCodeLine{00106\ \ \ \ \ first\ =\ temp.first;}
+\DoxyCodeLine{00107\ \ \ \ \ temp.first\ =\ temp\_first;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ temp\_last\ =\ last;}
+\DoxyCodeLine{00110\ \ \ \ \ last\ =\ temp.last;}
+\DoxyCodeLine{00111\ \ \ \ \ temp.last\ =\ last;}
+\DoxyCodeLine{00112\ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00114\ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_circular_queue_a5fac72bb179627325699fb59e61b176f}{CircularQueue<T>::empty}}()\textcolor{keyword}{\ const\ }}
+\DoxyCodeLine{00118\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{return}\ count\ ==\ 0;}
+\DoxyCodeLine{00120\ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00123\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circular_queue_ae7bcf22aee9ab5657d29317987660544}{CircularQueue<T>::enqueue}}(\textcolor{keyword}{const}\ T\&\ val)\ }
+\DoxyCodeLine{00124\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{if}\ (count\ ==\ capacity)\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ T*\ temp\ =\ \textcolor{keyword}{new}\ T[capacity\ *\ 2];}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ capacity;\ ++i)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ temp[i]\ =\ peek();}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ dequeue();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ first\ =\ 0;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ last\ =\ capacity;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ count\ =\ capacity;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ capacity\ *=\ 2;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ data;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ data\ =\ temp;}
+\DoxyCodeLine{00138\ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ data[last]\ =\ val;}
+\DoxyCodeLine{00140\ \ \ \ \ (++last)\ \%=\ capacity;}
+\DoxyCodeLine{00141\ \ \ \ \ count++;}
+\DoxyCodeLine{00142\ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circular_queue_a97dd1750957073c5c75b4aad94332ee2}{CircularQueue<T>::dequeue}}()\ }
+\DoxyCodeLine{00146\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ count-\/-\/;}
+\DoxyCodeLine{00148\ \ \ \ \ (++first)\ \%=\ capacity;}
+\DoxyCodeLine{00149\ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00152\ T\&\ \mbox{\hyperlink{class_circular_queue_ae610edcbd73ddc153725b818ca3dba06}{CircularQueue<T>::peek}}()}
+\DoxyCodeLine{00153\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{return}\ data[first];}
+\DoxyCodeLine{00155\ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00158\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{class_circular_queue_ae610edcbd73ddc153725b818ca3dba06}{CircularQueue<T>::peek}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00159\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{return}\ data[first];}
+\DoxyCodeLine{00161\ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00164\ \mbox{\hyperlink{class_circular_queue_ae983345f91859f4d532749f0b44531df}{CircularQueue<T>::\string~CircularQueue}}()\ }
+\DoxyCodeLine{00165\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{delete}[]\ data;}
+\DoxyCodeLine{00167\ \}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -13,6 +13,7 @@ set(sources
   test/test_linked_queue.cpp
   test/test_queue.cpp
   test/test_static_circular_queue.cpp
+  test/test_circular_queue.cpp
   test/test_vector.cpp
   test/test_linked_stack.cpp
   test/test_static_stack.cpp
