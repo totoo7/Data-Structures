@@ -72,7 +72,7 @@ template<typename T>
 inline void BinarySearchTree<T>::clear(Node*& root) {
     if (!root) return;
     clear(root->left);
-    clear(root->left);
+    clear(root->right);
     delete root;
     root = nullptr;
 }
@@ -92,12 +92,8 @@ inline bool BinarySearchTree<T>::find(Node* n, const T& value) {
 
 template<typename T>
 inline typename BinarySearchTree<T>::Node* BinarySearchTree<T>::copy(Node* root) {
-    if (!root) return root;
-    Node* n = new Node;
-    n->value = root->value;
-    n->left = copy(root->left);
-    n->right = copy(root->right);
-    return n;
+    if (!root) return nullptr;
+    return new Node {root->value, copy(root->left), copy(root->right)};
 }
 
 template<typename T>
@@ -116,7 +112,7 @@ inline bool BinarySearchTree<T>::remove(Node*& root, const T& value) {
             Node* min = get_min(root->right);
             min->left = root->left;
             min->right = root->right;
-
+            root = min;
         }
         delete to_remove;
         return true;
