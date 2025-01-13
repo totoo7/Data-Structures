@@ -1,0 +1,202 @@
+\doxysection{Static\+Stack\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classStaticStack}{}\label{classStaticStack}\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+
+
+A static stack implementation with a fixed size.  
+
+
+
+
+{\ttfamily \#include $<$Static\+Stack.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStaticStack_aeffafb03d3c0690d0ce7fabb587716e6}{Static\+Stack}} (size\+\_\+t size=16)
+\begin{DoxyCompactList}\small\item\em Constructs a stack with the specified size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStaticStack_a145f44d3233db82aadea7a4349fa612d}{Static\+Stack}} (const \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStaticStack}{Static\+Stack}} \& \mbox{\hyperlink{classStaticStack_aebd11f90ab6df082791cbac6ac2f1a8d}{operator=}} (const \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Assignment operator for the stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStaticStack_a57f7ef7eb392b36c2d7db81f05b234dc}{push\+\_\+back}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Pushes an element onto the stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStaticStack_a2b959896941d1030e8ecd35db2e3f8aa}{pop\+\_\+back}} ()
+\begin{DoxyCompactList}\small\item\em Pops the top element from the stack. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classStaticStack_a8c709ba3f75ac2f904179b4cdd443d8e}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the top element of the stack. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classStaticStack_ae72ac6b81666945c811fa8996d5ff680}{peek}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const reference to the top element of the stack. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStaticStack_a82eab0b164369db70ca5142de2e098a8}{is\+\_\+empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the stack is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStaticStack_a14f5c41a79fef4b1398206dd2c54a943}{is\+\_\+full}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the stack is full. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStaticStack_a7ec4835f5c952142952dd4736c211440}{\texorpdfstring{$\sim$}{\string~}\+Static\+Stack}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the stack, releases the allocated memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Static\+Stack$<$ T $>$}
+A static stack implementation with a fixed size. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the stack. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStaticStack_aeffafb03d3c0690d0ce7fabb587716e6}\label{classStaticStack_aeffafb03d3c0690d0ce7fabb587716e6} 
+\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}!StaticStack@{StaticStack}}
+\index{StaticStack@{StaticStack}!StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{StaticStack()}{StaticStack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$\mbox{\hyperlink{classStaticStack}{\+::\+Static\+Stack}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size = {\ttfamily 16} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a stack with the specified size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the stack (default is 16). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStaticStack_a145f44d3233db82aadea7a4349fa612d}\label{classStaticStack_a145f44d3233db82aadea7a4349fa612d} 
+\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}!StaticStack@{StaticStack}}
+\index{StaticStack@{StaticStack}!StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{StaticStack()}{StaticStack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$\mbox{\hyperlink{classStaticStack}{\+::\+Static\+Stack}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor for the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The stack to copy from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStaticStack_a7ec4835f5c952142952dd4736c211440}\label{classStaticStack_a7ec4835f5c952142952dd4736c211440} 
+\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}!````~StaticStack@{\texorpdfstring{$\sim$}{\string~}StaticStack}}
+\index{````~StaticStack@{\texorpdfstring{$\sim$}{\string~}StaticStack}!StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StaticStack()}{\string~StaticStack()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classStaticStack}{Static\+Stack}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for the stack, releases the allocated memory. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStaticStack_a82eab0b164369db70ca5142de2e098a8}\label{classStaticStack_a82eab0b164369db70ca5142de2e098a8} 
+\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$\+::is\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the stack is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the stack is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classStaticStack_a14f5c41a79fef4b1398206dd2c54a943}\label{classStaticStack_a14f5c41a79fef4b1398206dd2c54a943} 
+\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}!is\_full@{is\_full}}
+\index{is\_full@{is\_full}!StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_full()}{is\_full()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$\+::is\+\_\+full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the stack is full. 
+
+\begin{DoxyReturn}{Returns}
+True if the stack is full, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classStaticStack_aebd11f90ab6df082791cbac6ac2f1a8d}\label{classStaticStack_aebd11f90ab6df082791cbac6ac2f1a8d} 
+\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$ \& \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assignment operator for the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The stack to assign. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the current stack. 
+\end{DoxyReturn}
+\Hypertarget{classStaticStack_a8c709ba3f75ac2f904179b4cdd443d8e}\label{classStaticStack_a8c709ba3f75ac2f904179b4cdd443d8e} 
+\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a reference to the top element of the stack. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the top element. 
+\end{DoxyReturn}
+\Hypertarget{classStaticStack_ae72ac6b81666945c811fa8996d5ff680}\label{classStaticStack_ae72ac6b81666945c811fa8996d5ff680} 
+\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a const reference to the top element of the stack. 
+
+\begin{DoxyReturn}{Returns}
+A const reference to the top element. 
+\end{DoxyReturn}
+\Hypertarget{classStaticStack_a2b959896941d1030e8ecd35db2e3f8aa}\label{classStaticStack_a2b959896941d1030e8ecd35db2e3f8aa} 
+\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pops the top element from the stack. 
+
+\Hypertarget{classStaticStack_a57f7ef7eb392b36c2d7db81f05b234dc}\label{classStaticStack_a57f7ef7eb392b36c2d7db81f05b234dc} 
+\index{StaticStack$<$ T $>$@{StaticStack$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!StaticStack$<$ T $>$@{StaticStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStaticStack}{Static\+Stack}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes an element onto the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to push onto the stack. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Static\+Stack.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,341 @@
+\doxysection{Doubly\+Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classDoublyLinkedList}{}\label{classDoublyLinkedList}\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+
+
+Implements a doubly linked list with support for iteration, insertion, removal, and traversal.  
+
+
+
+
+{\ttfamily \#include $<$Doubly\+Linked\+List.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}}
+\begin{DoxyCompactList}\small\item\em A bidirectional iterator for the \doxylink{classDoublyLinkedList}{Doubly\+Linked\+List}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDoublyLinkedList_ab16fd160493247d26572b9bef7fa078b}{Doubly\+Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty doubly linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDoublyLinkedList_ac80ff8b6a3b4570aa38e4ed6c1c22d37}{Doubly\+Linked\+List}} (const \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Constructs a copy of another doubly linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \& \mbox{\hyperlink{classDoublyLinkedList_adbd827c7cf1cc3c4825f702a9a7c78a4}{operator=}} (const \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Assigns the contents of another list to this list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_a3860c57466596336d2318b65117f1c1b}{push\+\_\+back}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Adds an element to the end of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_aec6c52ab0bf1b9a8b8074305d541e100}{push\+\_\+front}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Adds an element to the front of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \mbox{\hyperlink{classDoublyLinkedList_a54abf0a55cb06a9a072d9310d722f6e4}{insert}} (\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} where, const T \&value)
+\begin{DoxyCompactList}\small\item\em Inserts a value at a specific position in the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_a652f8d6b24cc6cb5f65d6042387f2389}{pop\+\_\+back}} ()
+\begin{DoxyCompactList}\small\item\em Removes the last element of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_ad545c70100c52b43a8c10aa4a23a04dd}{pop\+\_\+front}} ()
+\begin{DoxyCompactList}\small\item\em Removes the first element of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \mbox{\hyperlink{classDoublyLinkedList_a6273876a591d5f89b99cbe2066cd211d}{remove}} (\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} where)
+\begin{DoxyCompactList}\small\item\em Removes an element at a specific position. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classDoublyLinkedList_a94e687177f6e3efdd39288ac9ec393b2}{front}} ()
+\begin{DoxyCompactList}\small\item\em Accesses the first element of the list. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classDoublyLinkedList_a42c37b92937ed205e5d2141f3d35a578}{front}} () const
+\begin{DoxyCompactList}\small\item\em Accesses the first element of the list (const). \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classDoublyLinkedList_a66bf4094cb9b894734104bfc598436cc}{back}} ()
+\begin{DoxyCompactList}\small\item\em Accesses the last element of the list. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classDoublyLinkedList_a7eafdb67b1e556857b4974b52b0e0a39}{back}} () const
+\begin{DoxyCompactList}\small\item\em Accesses the last element of the list (const). \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classDoublyLinkedList_a6071aef95e9615ce1672e760173ebc71}{size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of elements in the list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDoublyLinkedList_a0007135e206b011cfc4bd69919d33b98}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the list is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \mbox{\hyperlink{classDoublyLinkedList_a343a136c65ba14eb40a1e39dc53c19b1}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the beginning of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \mbox{\hyperlink{classDoublyLinkedList_a3f0ff00c7d511902c91a1d97f933a386}{end}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the end of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDoublyLinkedList_ade7fbfd3c437d039c88ea9c3b9445150}{\texorpdfstring{$\sim$}{\string~}\+Doubly\+Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Cleans up all allocated memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Doubly\+Linked\+List$<$ T $>$}
+Implements a doubly linked list with support for iteration, insertion, removal, and traversal. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the elements stored in the list. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDoublyLinkedList_ab16fd160493247d26572b9bef7fa078b}\label{classDoublyLinkedList_ab16fd160493247d26572b9bef7fa078b} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!DoublyLinkedList@{DoublyLinkedList}}
+\index{DoublyLinkedList@{DoublyLinkedList}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DoublyLinkedList()}{DoublyLinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\mbox{\hyperlink{classDoublyLinkedList}{\+::\+Doubly\+Linked\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an empty doubly linked list. 
+
+\Hypertarget{classDoublyLinkedList_ac80ff8b6a3b4570aa38e4ed6c1c22d37}\label{classDoublyLinkedList_ac80ff8b6a3b4570aa38e4ed6c1c22d37} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!DoublyLinkedList@{DoublyLinkedList}}
+\index{DoublyLinkedList@{DoublyLinkedList}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DoublyLinkedList()}{DoublyLinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\mbox{\hyperlink{classDoublyLinkedList}{\+::\+Doubly\+Linked\+List}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a copy of another doubly linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Reference to the list to copy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_ade7fbfd3c437d039c88ea9c3b9445150}\label{classDoublyLinkedList_ade7fbfd3c437d039c88ea9c3b9445150} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!````~DoublyLinkedList@{\texorpdfstring{$\sim$}{\string~}DoublyLinkedList}}
+\index{````~DoublyLinkedList@{\texorpdfstring{$\sim$}{\string~}DoublyLinkedList}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DoublyLinkedList()}{\string~DoublyLinkedList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. Cleans up all allocated memory. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDoublyLinkedList_a66bf4094cb9b894734104bfc598436cc}\label{classDoublyLinkedList_a66bf4094cb9b894734104bfc598436cc} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!back@{back}}
+\index{back@{back}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the last element of the list. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the last element. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a7eafdb67b1e556857b4974b52b0e0a39}\label{classDoublyLinkedList_a7eafdb67b1e556857b4974b52b0e0a39} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!back@{back}}
+\index{back@{back}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the last element of the list (const). 
+
+\begin{DoxyReturn}{Returns}
+Const reference to the last element. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a343a136c65ba14eb40a1e39dc53c19b1}\label{classDoublyLinkedList_a343a136c65ba14eb40a1e39dc53c19b1} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns an iterator to the beginning of the list. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDoublyLinkedList_1_1Iterator}{Iterator} to the first element. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a0007135e206b011cfc4bd69919d33b98}\label{classDoublyLinkedList_a0007135e206b011cfc4bd69919d33b98} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the list is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the list is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a3f0ff00c7d511902c91a1d97f933a386}\label{classDoublyLinkedList_a3f0ff00c7d511902c91a1d97f933a386} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!end@{end}}
+\index{end@{end}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns an iterator to the end of the list. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDoublyLinkedList_1_1Iterator}{Iterator} to the sentinel node. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a94e687177f6e3efdd39288ac9ec393b2}\label{classDoublyLinkedList_a94e687177f6e3efdd39288ac9ec393b2} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!front@{front}}
+\index{front@{front}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the first element of the list. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the first element. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a42c37b92937ed205e5d2141f3d35a578}\label{classDoublyLinkedList_a42c37b92937ed205e5d2141f3d35a578} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!front@{front}}
+\index{front@{front}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the first element of the list (const). 
+
+\begin{DoxyReturn}{Returns}
+Const reference to the first element. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a54abf0a55cb06a9a072d9310d722f6e4}\label{classDoublyLinkedList_a54abf0a55cb06a9a072d9310d722f6e4} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}}}]{where,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts a value at a specific position in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & \doxylink{structDoublyLinkedList_1_1Iterator}{Iterator} pointing to the insertion position. \\
+\hline
+{\em value} & Value to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structDoublyLinkedList_1_1Iterator}{Iterator} to the newly inserted element. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_adbd827c7cf1cc3c4825f702a9a7c78a4}\label{classDoublyLinkedList_adbd827c7cf1cc3c4825f702a9a7c78a4} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assigns the contents of another list to this list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Reference to the list to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to this list. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a652f8d6b24cc6cb5f65d6042387f2389}\label{classDoublyLinkedList_a652f8d6b24cc6cb5f65d6042387f2389} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the last element of the list. 
+
+\Hypertarget{classDoublyLinkedList_ad545c70100c52b43a8c10aa4a23a04dd}\label{classDoublyLinkedList_ad545c70100c52b43a8c10aa4a23a04dd} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!pop\_front@{pop\_front}}
+\index{pop\_front@{pop\_front}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_front()}{pop\_front()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::pop\+\_\+front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the first element of the list. 
+
+\Hypertarget{classDoublyLinkedList_a3860c57466596336d2318b65117f1c1b}\label{classDoublyLinkedList_a3860c57466596336d2318b65117f1c1b} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an element to the end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Value to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_aec6c52ab0bf1b9a8b8074305d541e100}\label{classDoublyLinkedList_aec6c52ab0bf1b9a8b8074305d541e100} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!push\_front@{push\_front}}
+\index{push\_front@{push\_front}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_front()}{push\_front()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::push\+\_\+front (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an element to the front of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Value to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoublyLinkedList_a6273876a591d5f89b99cbe2066cd211d}\label{classDoublyLinkedList_a6273876a591d5f89b99cbe2066cd211d} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}}}]{where }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes an element at a specific position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & \doxylink{structDoublyLinkedList_1_1Iterator}{Iterator} pointing to the element to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structDoublyLinkedList_1_1Iterator}{Iterator} to the next element after the removed one. 
+\end{DoxyReturn}
+\Hypertarget{classDoublyLinkedList_a6071aef95e9615ce1672e760173ebc71}\label{classDoublyLinkedList_a6071aef95e9615ce1672e760173ebc71} 
+\index{DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}!size@{size}}
+\index{size@{size}!DoublyLinkedList$<$ T $>$@{DoublyLinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the number of elements in the list. 
+
+\begin{DoxyReturn}{Returns}
+Size of the list. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Doubly\+Linked\+List.\+hpp\end{DoxyCompactItemize}

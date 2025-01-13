@@ -1,0 +1,134 @@
+\doxysection{Queue\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classQueue}{}\label{classQueue}\index{Queue$<$ T $>$@{Queue$<$ T $>$}}
+
+
+A simple implementation of a queue using a dynamic array (std\+::vector).  
+
+
+
+
+{\ttfamily \#include $<$Queue.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classQueue_a504eb9d0777fb73f99d87a19b7c25c2a}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classQueue_a354902adb7468d07891ba04a4003fc6d}{is\+\_\+empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the queue is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_a25918244eb1e926c3958331a2cb33dac}{dequeue}} ()
+\begin{DoxyCompactList}\small\item\em Removes the front element from the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_af62dc64ed1e6095970d8767ca3501ae1}{enqueue}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Adds an element to the back of the queue. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classQueue_a8bdeca267b7fb80ca96cf8fe73e32c70}{peek}} () const
+\begin{DoxyCompactList}\small\item\em Provides access to the front element of the queue (const version). \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classQueue_a53798ccf56963a2104e2cab96d459900}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Provides access to the front element of the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Queue$<$ T $>$}
+A simple implementation of a queue using a dynamic array (std\+::vector). 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the queue. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classQueue_a25918244eb1e926c3958331a2cb33dac}\label{classQueue_a25918244eb1e926c3958331a2cb33dac} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::dequeue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the front element from the queue. 
+
+\Hypertarget{classQueue_af62dc64ed1e6095970d8767ca3501ae1}\label{classQueue_af62dc64ed1e6095970d8767ca3501ae1} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::enqueue (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an element to the back of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to enqueue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classQueue_a354902adb7468d07891ba04a4003fc6d}\label{classQueue_a354902adb7468d07891ba04a4003fc6d} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::is\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the queue is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classQueue_a53798ccf56963a2104e2cab96d459900}\label{classQueue_a53798ccf56963a2104e2cab96d459900} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides access to the front element of the queue. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the front element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::underflow\+\_\+error} & If the queue is empty. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classQueue_a8bdeca267b7fb80ca96cf8fe73e32c70}\label{classQueue_a8bdeca267b7fb80ca96cf8fe73e32c70} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides access to the front element of the queue (const version). 
+
+\begin{DoxyReturn}{Returns}
+A const reference to the front element. 
+\end{DoxyReturn}
+\Hypertarget{classQueue_a504eb9d0777fb73f99d87a19b7c25c2a}\label{classQueue_a504eb9d0777fb73f99d87a19b7c25c2a} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!size@{size}}
+\index{size@{size}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of elements in the queue. 
+
+\begin{DoxyReturn}{Returns}
+The size of the queue. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Queue.\+hpp\end{DoxyCompactItemize}

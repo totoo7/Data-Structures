@@ -1,0 +1,163 @@
+\doxysection{Deque.\+hpp}
+\hypertarget{Deque_8hpp_source}{}\label{Deque_8hpp_source}\index{Deque.hpp@{Deque.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DEQUE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DEQUE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDeque}{Deque}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDeque_ad962e9c9ddb2c3290ea91f796d7051bc}{Deque}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDeque_ad962e9c9ddb2c3290ea91f796d7051bc}{Deque}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDeque}{Deque<T>}}\&\ rhs);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDeque}{Deque<T>}}\&\ \mbox{\hyperlink{classDeque_abcd1c331b4844f00b83b40c3c1426899}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDeque}{Deque<T>}}\&\ rhs);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeque_a071ed9ac2c318a887122b84be26736aa}{push\_back}}(\textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeque_af9940385f67da2c7b90d56f97a3772ce}{push\_front}}(\textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeque_a98c69f46add39db7e5343acff654a50e}{pop\_back}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeque_a0e1a1df410dce314324203a54844f51e}{pop\_front}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classDeque_a8e0b65e76b6fa2b682346f48a92f39d6}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDeque_a9027d018be5719495a216f28b00801e1}{empty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ T\&\ \mbox{\hyperlink{classDeque_a5da300befcaf596fa2af79b6c12ca853}{front}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classDeque_a5da300befcaf596fa2af79b6c12ca853}{front}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ T\&\ \mbox{\hyperlink{classDeque_a816fabec7f0877388934794ca6751e75}{back}}();}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classDeque_a816fabec7f0877388934794ca6751e75}{back}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDeque_a7a214bb3ef8cb676f9ef0e9825ae4b1b}{\string~Deque}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ resize();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ T*\ data;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ count\ =\ 0;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ capacity\ =\ 2;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ head\ =\ 0;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ tail\ =\ 0;}
+\DoxyCodeLine{00116\ \};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00119\ \mbox{\hyperlink{classDeque_ad962e9c9ddb2c3290ea91f796d7051bc}{Deque<T>::Deque}}()\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ data\ =\ \textcolor{keyword}{new}\ T[capacity];}
+\DoxyCodeLine{00122\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (std::bad\_alloc\&\ e)\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ data;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00129\ \mbox{\hyperlink{classDeque_ad962e9c9ddb2c3290ea91f796d7051bc}{Deque<T>::Deque}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDeque}{Deque<T>}}\&\ rhs)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ data\ =\ \textcolor{keyword}{new}\ T[rhs.capacity];}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ count\ =\ rhs.count;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ capacity\ =\ rhs.capacity;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ head\ =\ rhs.head;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ tail\ =\ rhs.tail;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ count;\ i++)\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ data[(head\ +\ i)\ \%\ capacity]\ =\ rhs.data[(rhs.head\ +\ i)\ \%\ rhs.capacity];}
+\DoxyCodeLine{00138\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (std::bad\_alloc\&\ e)\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ data;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00141\ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00145\ \mbox{\hyperlink{classDeque}{Deque<T>}}\&\ \mbox{\hyperlink{classDeque_abcd1c331b4844f00b83b40c3c1426899}{Deque<T>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDeque}{Deque<T>}}\&\ rhs)\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ ==\ \&rhs)\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{classDeque}{Deque<T>}}\ temp\ =\ rhs;}
+\DoxyCodeLine{00148\ \ \ \ \ std::swap(data,\ temp.data);}
+\DoxyCodeLine{00149\ \ \ \ \ std::swap(count,\ temp.count);}
+\DoxyCodeLine{00150\ \ \ \ \ std::swap(capacity,\ temp.capacity);}
+\DoxyCodeLine{00151\ \ \ \ \ std::swap(head,\ temp.head);}
+\DoxyCodeLine{00152\ \ \ \ \ std::swap(tail,\ temp.tail);}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00154\ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00157\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeque_a071ed9ac2c318a887122b84be26736aa}{Deque<T>::push\_back}}(\textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{if}\ (count\ ==\ capacity)\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ resize();}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+\DoxyCodeLine{00161\ \ \ \ \ data[tail]\ =\ value;}
+\DoxyCodeLine{00162\ \ \ \ \ tail\ =\ (tail\ +\ 1)\ \%\ capacity;}
+\DoxyCodeLine{00163\ \ \ \ \ count++;}
+\DoxyCodeLine{00164\ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00167\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeque_af9940385f67da2c7b90d56f97a3772ce}{Deque<T>::push\_front}}(\textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{if}\ (count\ ==\ capacity)\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ resize();}
+\DoxyCodeLine{00170\ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ head\ =\ (head\ ==\ 0)\ ?\ capacity\ -\/\ 1\ :\ head\ -\/\ 1;}
+\DoxyCodeLine{00172\ \ \ \ \ data[head]\ =\ value;}
+\DoxyCodeLine{00173\ \ \ \ \ count++;}
+\DoxyCodeLine{00174\ \}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeque_a98c69f46add39db7e5343acff654a50e}{Deque<T>::pop\_back}}()\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ tail\ =\ (tail\ ==\ 0)\ ?\ capacity\ -\/\ 1\ :\ tail\ -\/\ 1;}
+\DoxyCodeLine{00179\ \ \ \ \ count-\/-\/;}
+\DoxyCodeLine{00180\ \}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeque_a0e1a1df410dce314324203a54844f51e}{Deque<T>::pop\_front}}()\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ head\ =\ (head\ +\ 1)\ \%\ capacity;}
+\DoxyCodeLine{00185\ \ \ \ \ count-\/-\/;}
+\DoxyCodeLine{00186\ \}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00189\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classDeque_a8e0b65e76b6fa2b682346f48a92f39d6}{Deque<T>::size}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{return}\ count;}
+\DoxyCodeLine{00191\ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00194\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDeque_a9027d018be5719495a216f28b00801e1}{Deque<T>::empty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{return}\ count\ ==\ 0;}
+\DoxyCodeLine{00196\ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00199\ T\&\ \mbox{\hyperlink{classDeque_a5da300befcaf596fa2af79b6c12ca853}{Deque<T>::front}}()\ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordflow}{return}\ data[head];}
+\DoxyCodeLine{00201\ \}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00204\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classDeque_a5da300befcaf596fa2af79b6c12ca853}{Deque<T>::front}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{return}\ data[head];}
+\DoxyCodeLine{00206\ \}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00209\ T\&\ \mbox{\hyperlink{classDeque_a816fabec7f0877388934794ca6751e75}{Deque<T>::back}}()\ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ back\_index\ =\ (tail\ ==\ 0)\ ?\ capacity\ -\/\ 1\ :\ tail\ -\/\ 1;}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordflow}{return}\ data[back\_index];}
+\DoxyCodeLine{00212\ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00215\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classDeque_a816fabec7f0877388934794ca6751e75}{Deque<T>::back}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ back\_index\ =\ (tail\ ==\ 0)\ ?\ capacity\ -\/\ 1\ :\ tail\ -\/\ 1;}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordflow}{return}\ data[back\_index];}
+\DoxyCodeLine{00218\ \}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00221\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeque}{Deque<T>::resize}}()\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_capacity\ =\ capacity\ *\ 2;}
+\DoxyCodeLine{00223\ \ \ \ \ T*\ temp\ =\ \textcolor{keyword}{new}\ T[new\_capacity];}
+\DoxyCodeLine{00224\ \ \ \ \ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ count;\ i++)\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ temp[i]\ =\ data[(head\ +\ i)\ \%\ capacity];}
+\DoxyCodeLine{00227\ \ \ \ \ \}}
+\DoxyCodeLine{00228\ \ \ \ \ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keyword}{delete}[]\ data;}
+\DoxyCodeLine{00230\ \ \ \ \ data\ =\ temp;}
+\DoxyCodeLine{00231\ \ \ \ \ head\ =\ 0;}
+\DoxyCodeLine{00232\ \ \ \ \ tail\ =\ count;}
+\DoxyCodeLine{00233\ \ \ \ \ capacity\ =\ new\_capacity;}
+\DoxyCodeLine{00234\ \}}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00237\ \mbox{\hyperlink{classDeque_a7a214bb3ef8cb676f9ef0e9825ae4b1b}{Deque<T>::\string~Deque}}()\ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keyword}{delete}[]\ data;}
+\DoxyCodeLine{00239\ \}}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

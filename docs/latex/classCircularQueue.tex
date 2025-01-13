@@ -1,0 +1,181 @@
+\doxysection{Circular\+Queue\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classCircularQueue}{}\label{classCircularQueue}\index{CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}}
+
+
+A resizing circular queue implementation.  
+
+
+
+
+{\ttfamily \#include $<$Circular\+Queue.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCircularQueue_afb497745b3a1e472ec670345328301a3}{Circular\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a circular queue with a specified capacity. Starting capacity is 2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCircularQueue_a27b03d8cb97cabd9a05ea9a4de176293}{Circular\+Queue}} (const \mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$ \& \mbox{\hyperlink{classCircularQueue_ac0af045de476245a188d74511b365e26}{operator=}} (const \mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCircularQueue_a5fac72bb179627325699fb59e61b176f}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the queue is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCircularQueue_ae7bcf22aee9ab5657d29317987660544}{enqueue}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Adds an element to the back of the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCircularQueue_a97dd1750957073c5c75b4aad94332ee2}{dequeue}} ()
+\begin{DoxyCompactList}\small\item\em Removes the front element from the queue. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classCircularQueue_ae610edcbd73ddc153725b818ca3dba06}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Provides access to the front element of the queue. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classCircularQueue_ae440e4a351d592ffd6f8fec3d878e91d}{peek}} () const
+\begin{DoxyCompactList}\small\item\em Provides access to the front element of the queue (const version). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCircularQueue_ae983345f91859f4d532749f0b44531df}{\texorpdfstring{$\sim$}{\string~}\+Circular\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that releases the allocated memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Circular\+Queue$<$ T $>$}
+A resizing circular queue implementation. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the queue. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCircularQueue_afb497745b3a1e472ec670345328301a3}\label{classCircularQueue_afb497745b3a1e472ec670345328301a3} 
+\index{CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}!CircularQueue@{CircularQueue}}
+\index{CircularQueue@{CircularQueue}!CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CircularQueue()}{CircularQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$\mbox{\hyperlink{classCircularQueue}{\+::\+Circular\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a circular queue with a specified capacity. Starting capacity is 2. 
+
+\Hypertarget{classCircularQueue_a27b03d8cb97cabd9a05ea9a4de176293}\label{classCircularQueue_a27b03d8cb97cabd9a05ea9a4de176293} 
+\index{CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}!CircularQueue@{CircularQueue}}
+\index{CircularQueue@{CircularQueue}!CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CircularQueue()}{CircularQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$\mbox{\hyperlink{classCircularQueue}{\+::\+Circular\+Queue}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The queue to copy from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCircularQueue_ae983345f91859f4d532749f0b44531df}\label{classCircularQueue_ae983345f91859f4d532749f0b44531df} 
+\index{CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}!````~CircularQueue@{\texorpdfstring{$\sim$}{\string~}CircularQueue}}
+\index{````~CircularQueue@{\texorpdfstring{$\sim$}{\string~}CircularQueue}!CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CircularQueue()}{\string~CircularQueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classCircularQueue}{Circular\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor that releases the allocated memory. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCircularQueue_a97dd1750957073c5c75b4aad94332ee2}\label{classCircularQueue_a97dd1750957073c5c75b4aad94332ee2} 
+\index{CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$\+::dequeue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the front element from the queue. 
+
+\Hypertarget{classCircularQueue_a5fac72bb179627325699fb59e61b176f}\label{classCircularQueue_a5fac72bb179627325699fb59e61b176f} 
+\index{CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the queue is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classCircularQueue_ae7bcf22aee9ab5657d29317987660544}\label{classCircularQueue_ae7bcf22aee9ab5657d29317987660544} 
+\index{CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$\+::enqueue (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Adds an element to the back of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to enqueue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCircularQueue_ac0af045de476245a188d74511b365e26}\label{classCircularQueue_ac0af045de476245a188d74511b365e26} 
+\index{CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$ \& \mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The queue to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the assigned queue. 
+\end{DoxyReturn}
+\Hypertarget{classCircularQueue_ae610edcbd73ddc153725b818ca3dba06}\label{classCircularQueue_ae610edcbd73ddc153725b818ca3dba06} 
+\index{CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Provides access to the front element of the queue. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the front element. 
+\end{DoxyReturn}
+\Hypertarget{classCircularQueue_ae440e4a351d592ffd6f8fec3d878e91d}\label{classCircularQueue_ae440e4a351d592ffd6f8fec3d878e91d} 
+\index{CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!CircularQueue$<$ T $>$@{CircularQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classCircularQueue}{Circular\+Queue}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Provides access to the front element of the queue (const version). 
+
+\begin{DoxyReturn}{Returns}
+A const reference to the front element. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Circular\+Queue.\+hpp\end{DoxyCompactItemize}

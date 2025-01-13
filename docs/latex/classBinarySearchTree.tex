@@ -1,0 +1,193 @@
+\doxysection{Binary\+Search\+Tree\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classBinarySearchTree}{}\label{classBinarySearchTree}\index{BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}}
+
+
+A template-\/based Binary Search Tree implementation.  
+
+
+
+
+{\ttfamily \#include $<$Binary\+Search\+Tree.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBinarySearchTree_a4c0018fbbf24cb8962a810d4be156042}{Binary\+Search\+Tree}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBinarySearchTree_a9161b862cb6087ab3f1b50d3c6a17cc6}{Binary\+Search\+Tree}} (const \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$ \& \mbox{\hyperlink{classBinarySearchTree_a2e92a26c130293dbe9ed9b98fd8db750}{operator=}} (const \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBinarySearchTree_a1d1d5ceb3742c64dfb9a4d8bc3024c16}{find}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Searches for a value in the Binary Search Tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBinarySearchTree_a0a5cac442dbab19565077435b16243b1}{insert}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Inserts a value into the Binary Search Tree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBinarySearchTree_a9a753b1582dc744b96cc36dd7fea0396}{remove}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Removes a value from the Binary Search Tree. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classBinarySearchTree_acaeaebc8e9558367c70e40faee96cfc3}{height}} () const
+\begin{DoxyCompactList}\small\item\em Calculates the height of the Binary Search Tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBinarySearchTree_ac684bda523ba5628fbcb7a8c9d14cf10}{print}} () const
+\begin{DoxyCompactList}\small\item\em Prints the values of the Binary Search Tree in in-\/order traversal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBinarySearchTree_a3959625f088828c86e49bf1b63f4cbdf}{\texorpdfstring{$\sim$}{\string~}\+Binary\+Search\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Binary\+Search\+Tree$<$ T $>$}
+A template-\/based Binary Search Tree implementation. 
+
+Provides basic operations such as insertion, deletion, search, height calculation, and in-\/order traversal printing.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the elements stored in the Binary Search Tree. Must support comparison operators. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBinarySearchTree_a4c0018fbbf24cb8962a810d4be156042}\label{classBinarySearchTree_a4c0018fbbf24cb8962a810d4be156042} 
+\index{BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}!BinarySearchTree@{BinarySearchTree}}
+\index{BinarySearchTree@{BinarySearchTree}!BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BinarySearchTree()}{BinarySearchTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$\mbox{\hyperlink{classBinarySearchTree}{\+::\+Binary\+Search\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\Hypertarget{classBinarySearchTree_a9161b862cb6087ab3f1b50d3c6a17cc6}\label{classBinarySearchTree_a9161b862cb6087ab3f1b50d3c6a17cc6} 
+\index{BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}!BinarySearchTree@{BinarySearchTree}}
+\index{BinarySearchTree@{BinarySearchTree}!BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BinarySearchTree()}{BinarySearchTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$\mbox{\hyperlink{classBinarySearchTree}{\+::\+Binary\+Search\+Tree}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. 
+
+Creates a deep copy of another \doxylink{classBinarySearchTree}{Binary\+Search\+Tree}. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \doxylink{classBinarySearchTree}{Binary\+Search\+Tree} to copy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBinarySearchTree_a3959625f088828c86e49bf1b63f4cbdf}\label{classBinarySearchTree_a3959625f088828c86e49bf1b63f4cbdf} 
+\index{BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}!````~BinarySearchTree@{\texorpdfstring{$\sim$}{\string~}BinarySearchTree}}
+\index{````~BinarySearchTree@{\texorpdfstring{$\sim$}{\string~}BinarySearchTree}!BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BinarySearchTree()}{\string~BinarySearchTree()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+Frees all allocated memory. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBinarySearchTree_a1d1d5ceb3742c64dfb9a4d8bc3024c16}\label{classBinarySearchTree_a1d1d5ceb3742c64dfb9a4d8bc3024c16} 
+\index{BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}!find@{find}}
+\index{find@{find}!BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Searches for a value in the Binary Search Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value exists in the tree, otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{classBinarySearchTree_acaeaebc8e9558367c70e40faee96cfc3}\label{classBinarySearchTree_acaeaebc8e9558367c70e40faee96cfc3} 
+\index{BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}!height@{height}}
+\index{height@{height}!BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the height of the Binary Search Tree. 
+
+\begin{DoxyReturn}{Returns}
+The height of the tree. 
+\end{DoxyReturn}
+\Hypertarget{classBinarySearchTree_a0a5cac442dbab19565077435b16243b1}\label{classBinarySearchTree_a0a5cac442dbab19565077435b16243b1} 
+\index{BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts a value into the Binary Search Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBinarySearchTree_a2e92a26c130293dbe9ed9b98fd8db750}\label{classBinarySearchTree_a2e92a26c130293dbe9ed9b98fd8db750} 
+\index{BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$ \& \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy assignment operator. 
+
+Assigns the contents of another \doxylink{classBinarySearchTree}{Binary\+Search\+Tree} to this one. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \doxylink{classBinarySearchTree}{Binary\+Search\+Tree} to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the current \doxylink{classBinarySearchTree}{Binary\+Search\+Tree}. 
+\end{DoxyReturn}
+\Hypertarget{classBinarySearchTree_ac684bda523ba5628fbcb7a8c9d14cf10}\label{classBinarySearchTree_ac684bda523ba5628fbcb7a8c9d14cf10} 
+\index{BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}!print@{print}}
+\index{print@{print}!BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the values of the Binary Search Tree in in-\/order traversal. 
+
+\Hypertarget{classBinarySearchTree_a9a753b1582dc744b96cc36dd7fea0396}\label{classBinarySearchTree_a9a753b1582dc744b96cc36dd7fea0396} 
+\index{BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!BinarySearchTree$<$ T $>$@{BinarySearchTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a value from the Binary Search Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was removed, otherwise false. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Binary\+Search\+Tree.\+hpp\end{DoxyCompactItemize}

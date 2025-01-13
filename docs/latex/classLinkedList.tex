@@ -1,0 +1,485 @@
+\doxysection{Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classLinkedList}{}\label{classLinkedList}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+
+
+A templated singly linked list class.  
+
+
+
+
+{\ttfamily \#include $<$Linked\+List.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLinkedList_1_1Iterator}{Iterator}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classLinkedList_1_1Iterator}{Iterator} for traversing the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLinkedList_a82a3828007f4e4d51b5d3a7d874c4c60}{Linked\+List}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. Initializes an empty linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinkedList_a6db1ff0c1d3a6764b848eec23280f0ed}{Linked\+List}} (const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. Copies the content of another linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \& \mbox{\hyperlink{classLinkedList_a70227995c240164eb885f16a91eb3d9b}{operator=}} (const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Assignment operator. Replaces the content with another linked list\textquotesingle{}s content. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classLinkedList_a480ace91f7d5f3ea1c1ce1461a2866be}{front}} ()
+\begin{DoxyCompactList}\small\item\em Accesses the first element. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classLinkedList_a7347adb7d2301179544d667fd7af1a3a}{front}} () const
+\begin{DoxyCompactList}\small\item\em Accesses the first element (const version). \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classLinkedList_a899dccd752ba96f4ad818df8a5be99da}{back}} ()
+\begin{DoxyCompactList}\small\item\em Accesses the last element. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classLinkedList_a91e77f8ed422e9f287488996018b3154}{back}} () const
+\begin{DoxyCompactList}\small\item\em Accesses the last element (const version). \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classLinkedList_ae7dd841046aa75e29638b5d3be9592e4}{at}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Accesses an element at a specific index. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classLinkedList_a55de8aabc9be4aa15f4f8ef30be5d568}{at}} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Accesses an element at a specific index (const version). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLinkedList_a4b4fb68b6611f6913953257a24cbca74}{is\+\_\+empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the linked list is empty. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classLinkedList_a3d6ef7c98227fb40162495ec1e79d5f6}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the linked list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_a594003a37a322eae30256557c9266d33}{push\+\_\+front}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Inserts an element at the front of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_ab43fe4dcd2ca4875a689a5a4c70cc201}{push\+\_\+end}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Inserts an element at the end of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_a3ff65c2bb7a0d4446294700d20779f55}{push\+\_\+at}} (size\+\_\+t index, const T \&val)
+\begin{DoxyCompactList}\small\item\em Inserts an element at a specific index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_adf8a8e8e7fec3020e3586c26a47f93dc}{push\+\_\+after}} (\mbox{\hyperlink{classLinkedList_1_1Iterator}{Iterator}} iter, const T \&val)
+\begin{DoxyCompactList}\small\item\em Inserts an element after a specific iterator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_ae8d397f2615cfc86513f73fc53556501}{pop\+\_\+front}} ()
+\begin{DoxyCompactList}\small\item\em Removes the first element from the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_a09f8f1b90446aeeedc502df68057fe14}{pop\+\_\+end}} ()
+\begin{DoxyCompactList}\small\item\em Removes the last element from the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_a350717892454a82951e29a5fee62f171}{pop\+\_\+at}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Removes an element at a specific index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_ae840bf007260abc0b0f27480a527586f}{pop\+\_\+after}} (\mbox{\hyperlink{classLinkedList_1_1Iterator}{Iterator}} iter)
+\begin{DoxyCompactList}\small\item\em Removes an element after a specific iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinkedList_1_1Iterator}{Iterator}} \mbox{\hyperlink{classLinkedList_a53bd95afbd755876cc17e3672d2ba1aa}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the first element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinkedList_1_1Iterator}{Iterator}} \mbox{\hyperlink{classLinkedList_a0bddfa8733c608cefaeb05ac672e86fb}{end}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the end (past-\/the-\/last element). \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classLinkedList_1_1Iterator}{Iterator}} \mbox{\hyperlink{classLinkedList_a4ee1174289ddd7d14c03073563f807da}{c\+\_\+begin}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const iterator to the first element. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classLinkedList_1_1Iterator}{Iterator}} \mbox{\hyperlink{classLinkedList_a55fecfc0a640d65ef79f9f5b18fa208a}{c\+\_\+end}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const iterator to the end (past-\/the-\/last element). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_a8d3e5a84e8725ffde3773589e3da1c21}{append}} (const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \&rhs)
+\item 
+void \mbox{\hyperlink{classLinkedList_a7108a9a28348d5f0b82d47be8d88e3e2}{reverse}} ()
+\item 
+void \mbox{\hyperlink{classLinkedList_a691b27f81c60be3c891fe6d56a4718b4}{sort}} ()
+\item 
+bool \mbox{\hyperlink{classLinkedList_aa195ce9690eee90515dad1a3e046e98f}{is\+\_\+sorted}} () const
+\item 
+\mbox{\hyperlink{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}{\texorpdfstring{$\sim$}{\string~}\+Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Cleans up all resources used by the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Linked\+List$<$ T $>$}
+A templated singly linked list class. 
+
+This class provides methods for managing a list of elements, supporting basic operations such as insertion, deletion, and traversal.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the elements stored in the list. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classLinkedList_a82a3828007f4e4d51b5d3a7d874c4c60}\label{classLinkedList_a82a3828007f4e4d51b5d3a7d874c4c60} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
+\index{LinkedList@{LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\mbox{\hyperlink{classLinkedList}{\+::\+Linked\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. Initializes an empty linked list. 
+
+\Hypertarget{classLinkedList_a6db1ff0c1d3a6764b848eec23280f0ed}\label{classLinkedList_a6db1ff0c1d3a6764b848eec23280f0ed} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
+\index{LinkedList@{LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\mbox{\hyperlink{classLinkedList}{\+::\+Linked\+List}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. Copies the content of another linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \doxylink{classLinkedList}{Linked\+List} to copy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}\label{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!````~LinkedList@{\texorpdfstring{$\sim$}{\string~}LinkedList}}
+\index{````~LinkedList@{\texorpdfstring{$\sim$}{\string~}LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LinkedList()}{\string~LinkedList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classLinkedList}{Linked\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. Cleans up all resources used by the linked list. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLinkedList_a8d3e5a84e8725ffde3773589e3da1c21}\label{classLinkedList_a8d3e5a84e8725ffde3773589e3da1c21} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!append@{append}}
+\index{append@{append}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classLinkedList_ae7dd841046aa75e29638b5d3be9592e4}\label{classLinkedList_ae7dd841046aa75e29638b5d3be9592e4} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!at@{at}}
+\index{at@{at}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses an element at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the element. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a55de8aabc9be4aa15f4f8ef30be5d568}\label{classLinkedList_a55de8aabc9be4aa15f4f8ef30be5d568} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!at@{at}}
+\index{at@{at}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses an element at a specific index (const version). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Const reference to the element. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a899dccd752ba96f4ad818df8a5be99da}\label{classLinkedList_a899dccd752ba96f4ad818df8a5be99da} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!back@{back}}
+\index{back@{back}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the last element. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the last element. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a91e77f8ed422e9f287488996018b3154}\label{classLinkedList_a91e77f8ed422e9f287488996018b3154} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!back@{back}}
+\index{back@{back}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the last element (const version). 
+
+\begin{DoxyReturn}{Returns}
+Const reference to the last element. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a53bd95afbd755876cc17e3672d2ba1aa}\label{classLinkedList_a53bd95afbd755876cc17e3672d2ba1aa} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::\+Iterator \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns an iterator to the first element. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classLinkedList_1_1Iterator}{Iterator} to the first element. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a4ee1174289ddd7d14c03073563f807da}\label{classLinkedList_a4ee1174289ddd7d14c03073563f807da} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!c\_begin@{c\_begin}}
+\index{c\_begin@{c\_begin}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{c\_begin()}{c\_begin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::\+Iterator const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::c\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a const iterator to the first element. 
+
+\begin{DoxyReturn}{Returns}
+Const iterator to the first element. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a55fecfc0a640d65ef79f9f5b18fa208a}\label{classLinkedList_a55fecfc0a640d65ef79f9f5b18fa208a} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!c\_end@{c\_end}}
+\index{c\_end@{c\_end}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{c\_end()}{c\_end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::\+Iterator const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::c\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a const iterator to the end (past-\/the-\/last element). 
+
+\begin{DoxyReturn}{Returns}
+Const iterator to the end. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a0bddfa8733c608cefaeb05ac672e86fb}\label{classLinkedList_a0bddfa8733c608cefaeb05ac672e86fb} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!end@{end}}
+\index{end@{end}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::\+Iterator \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns an iterator to the end (past-\/the-\/last element). 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classLinkedList_1_1Iterator}{Iterator} to the end. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a480ace91f7d5f3ea1c1ce1461a2866be}\label{classLinkedList_a480ace91f7d5f3ea1c1ce1461a2866be} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!front@{front}}
+\index{front@{front}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the first element. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the first element. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a7347adb7d2301179544d667fd7af1a3a}\label{classLinkedList_a7347adb7d2301179544d667fd7af1a3a} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!front@{front}}
+\index{front@{front}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the first element (const version). 
+
+\begin{DoxyReturn}{Returns}
+Const reference to the first element. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a4b4fb68b6611f6913953257a24cbca74}\label{classLinkedList_a4b4fb68b6611f6913953257a24cbca74} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::is\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the linked list is empty. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the list is empty, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_aa195ce9690eee90515dad1a3e046e98f}\label{classLinkedList_aa195ce9690eee90515dad1a3e046e98f} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!is\_sorted@{is\_sorted}}
+\index{is\_sorted@{is\_sorted}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_sorted()}{is\_sorted()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::is\+\_\+sorted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classLinkedList_a70227995c240164eb885f16a91eb3d9b}\label{classLinkedList_a70227995c240164eb885f16a91eb3d9b} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \& \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assignment operator. Replaces the content with another linked list\textquotesingle{}s content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \doxylink{classLinkedList}{Linked\+List} to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the updated linked list. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_ae840bf007260abc0b0f27480a527586f}\label{classLinkedList_ae840bf007260abc0b0f27480a527586f} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!pop\_after@{pop\_after}}
+\index{pop\_after@{pop\_after}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_after()}{pop\_after()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::pop\+\_\+after (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLinkedList_1_1Iterator}{Iterator}}}]{iter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes an element after a specific iterator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter} & \doxylink{classLinkedList_1_1Iterator}{Iterator} pointing to the position after which to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLinkedList_a350717892454a82951e29a5fee62f171}\label{classLinkedList_a350717892454a82951e29a5fee62f171} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!pop\_at@{pop\_at}}
+\index{pop\_at@{pop\_at}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_at()}{pop\_at()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::pop\+\_\+at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes an element at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the element to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLinkedList_a09f8f1b90446aeeedc502df68057fe14}\label{classLinkedList_a09f8f1b90446aeeedc502df68057fe14} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!pop\_end@{pop\_end}}
+\index{pop\_end@{pop\_end}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_end()}{pop\_end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::pop\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the last element from the list. 
+
+\Hypertarget{classLinkedList_ae8d397f2615cfc86513f73fc53556501}\label{classLinkedList_ae8d397f2615cfc86513f73fc53556501} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!pop\_front@{pop\_front}}
+\index{pop\_front@{pop\_front}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_front()}{pop\_front()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::pop\+\_\+front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the first element from the list. 
+
+\Hypertarget{classLinkedList_adf8a8e8e7fec3020e3586c26a47f93dc}\label{classLinkedList_adf8a8e8e7fec3020e3586c26a47f93dc} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!push\_after@{push\_after}}
+\index{push\_after@{push\_after}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_after()}{push\_after()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::push\+\_\+after (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLinkedList_1_1Iterator}{Iterator}}}]{iter,  }\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts an element after a specific iterator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter} & \doxylink{classLinkedList_1_1Iterator}{Iterator} pointing to the position after which to insert. \\
+\hline
+{\em val} & Element to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLinkedList_a3ff65c2bb7a0d4446294700d20779f55}\label{classLinkedList_a3ff65c2bb7a0d4446294700d20779f55} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!push\_at@{push\_at}}
+\index{push\_at@{push\_at}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_at()}{push\_at()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::push\+\_\+at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index,  }\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts an element at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index to insert the element at. \\
+\hline
+{\em val} & Element to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLinkedList_ab43fe4dcd2ca4875a689a5a4c70cc201}\label{classLinkedList_ab43fe4dcd2ca4875a689a5a4c70cc201} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!push\_end@{push\_end}}
+\index{push\_end@{push\_end}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_end()}{push\_end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::push\+\_\+end (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts an element at the end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Element to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLinkedList_a594003a37a322eae30256557c9266d33}\label{classLinkedList_a594003a37a322eae30256557c9266d33} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!push\_front@{push\_front}}
+\index{push\_front@{push\_front}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_front()}{push\_front()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::push\+\_\+front (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts an element at the front of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Element to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLinkedList_a7108a9a28348d5f0b82d47be8d88e3e2}\label{classLinkedList_a7108a9a28348d5f0b82d47be8d88e3e2} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!reverse@{reverse}}
+\index{reverse@{reverse}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reverse()}{reverse()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::reverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classLinkedList_a3d6ef7c98227fb40162495ec1e79d5f6}\label{classLinkedList_a3d6ef7c98227fb40162495ec1e79d5f6} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!size@{size}}
+\index{size@{size}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of elements in the linked list. 
+
+\begin{DoxyReturn}{Returns}
+Size of the linked list. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a691b27f81c60be3c891fe6d56a4718b4}\label{classLinkedList_a691b27f81c60be3c891fe6d56a4718b4} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Linked\+List.\+hpp\end{DoxyCompactItemize}

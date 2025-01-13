@@ -1,0 +1,233 @@
+\doxysection{Doubly\+Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+::Iterator Struct Reference}
+\hypertarget{structDoublyLinkedList_1_1Iterator}{}\label{structDoublyLinkedList_1_1Iterator}\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+
+
+A bidirectional iterator for the \doxylink{classDoublyLinkedList}{Doubly\+Linked\+List}.  
+
+
+
+
+{\ttfamily \#include $<$Doubly\+Linked\+List.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a65c4a5321401795079779bad29298284}{Iterator}} (Node \texorpdfstring{$\ast$}{*}n)
+\begin{DoxyCompactList}\small\item\em Constructs an iterator pointing to a given node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \& \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a340a1e653edcb3835fe88d5e9481df57}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Advances the iterator to the next node (prefix). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a275a610cb193dcd258c9b8ee4ff68a38}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Advances the iterator to the next node (postfix). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \& \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_ad6e59fac582b820bc7d8fb73ae466970}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em Moves the iterator to the previous node (prefix). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a28bb790544e1686b2b4f648c36a13462}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em Moves the iterator to the previous node (postfix). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a8009b41aaf0add3114c9a81fd1c943fc}{operator!=}} (const \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Checks if two iterators are not equal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a59ce79839786240c10706df2c9d49e0a}{operator==}} (const \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Checks if two iterators are equal. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_ab3202d47ded53063a122641ae96cb2d8}{operator\texorpdfstring{$\ast$}{*}}} ()
+\begin{DoxyCompactList}\small\item\em Dereferences the iterator to access the data. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_afac19a53a7f30dfaf5ffc879053fac17}{operator\texorpdfstring{$\ast$}{*}}} () const
+\begin{DoxyCompactList}\small\item\em Dereferences the iterator to access the data (const). \end{DoxyCompactList}\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_ae9b76e5a14855e977bf0750064120a2c}{operator-\/$>$}} ()
+\begin{DoxyCompactList}\small\item\em Accesses the data in the current node through a pointer. \end{DoxyCompactList}\item 
+const T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a9f2968686c0469bd1db05bbac446974a}{operator-\/$>$}} () const
+\begin{DoxyCompactList}\small\item\em Accesses the data in the current node through a pointer (const). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a8518425fc192346c00bedb825184bcf1}{Doubly\+Linked\+List}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct Doubly\+Linked\+List$<$ T $>$\+::\+Iterator}
+A bidirectional iterator for the \doxylink{classDoublyLinkedList}{Doubly\+Linked\+List}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_a65c4a5321401795079779bad29298284}\label{structDoublyLinkedList_1_1Iterator_a65c4a5321401795079779bad29298284} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{Node \texorpdfstring{$\ast$}{*}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an iterator pointing to a given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Pointer to the node. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_a8009b41aaf0add3114c9a81fd1c943fc}\label{structDoublyLinkedList_1_1Iterator_a8009b41aaf0add3114c9a81fd1c943fc} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if two iterators are not equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \doxylink{structDoublyLinkedList_1_1Iterator}{Iterator} to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if iterators are not equal, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_ab3202d47ded53063a122641ae96cb2d8}\label{structDoublyLinkedList_1_1Iterator_ab3202d47ded53063a122641ae96cb2d8} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dereferences the iterator to access the data. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the data in the current node. 
+\end{DoxyReturn}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_afac19a53a7f30dfaf5ffc879053fac17}\label{structDoublyLinkedList_1_1Iterator_afac19a53a7f30dfaf5ffc879053fac17} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dereferences the iterator to access the data (const). 
+
+\begin{DoxyReturn}{Returns}
+Const reference to the data in the current node. 
+\end{DoxyReturn}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_a340a1e653edcb3835fe88d5e9481df57}\label{structDoublyLinkedList_1_1Iterator_a340a1e653edcb3835fe88d5e9481df57} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a65c4a5321401795079779bad29298284}{\+::\+Iterator}} \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Advances the iterator to the next node (prefix). 
+
+\begin{DoxyReturn}{Returns}
+Reference to the updated iterator. 
+\end{DoxyReturn}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_a275a610cb193dcd258c9b8ee4ff68a38}\label{structDoublyLinkedList_1_1Iterator_a275a610cb193dcd258c9b8ee4ff68a38} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a65c4a5321401795079779bad29298284}{\+::\+Iterator}} \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Advances the iterator to the next node (postfix). 
+
+\begin{DoxyReturn}{Returns}
+Copy of the iterator before advancing. 
+\end{DoxyReturn}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_ad6e59fac582b820bc7d8fb73ae466970}\label{structDoublyLinkedList_1_1Iterator_ad6e59fac582b820bc7d8fb73ae466970} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a65c4a5321401795079779bad29298284}{\+::\+Iterator}} \& \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moves the iterator to the previous node (prefix). 
+
+\begin{DoxyReturn}{Returns}
+Reference to the updated iterator. 
+\end{DoxyReturn}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_a28bb790544e1686b2b4f648c36a13462}\label{structDoublyLinkedList_1_1Iterator_a28bb790544e1686b2b4f648c36a13462} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\mbox{\hyperlink{structDoublyLinkedList_1_1Iterator_a65c4a5321401795079779bad29298284}{\+::\+Iterator}} \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moves the iterator to the previous node (postfix). 
+
+\begin{DoxyReturn}{Returns}
+Copy of the iterator before moving. 
+\end{DoxyReturn}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_ae9b76e5a14855e977bf0750064120a2c}\label{structDoublyLinkedList_1_1Iterator_ae9b76e5a14855e977bf0750064120a2c} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the data in the current node through a pointer. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the data. 
+\end{DoxyReturn}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_a9f2968686c0469bd1db05bbac446974a}\label{structDoublyLinkedList_1_1Iterator_a9f2968686c0469bd1db05bbac446974a} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the data in the current node through a pointer (const). 
+
+\begin{DoxyReturn}{Returns}
+Const pointer to the data. 
+\end{DoxyReturn}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_a59ce79839786240c10706df2c9d49e0a}\label{structDoublyLinkedList_1_1Iterator_a59ce79839786240c10706df2c9d49e0a} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}$<$ T $>$\+::\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structDoublyLinkedList_1_1Iterator}{Iterator}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if two iterators are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \doxylink{structDoublyLinkedList_1_1Iterator}{Iterator} to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if iterators are equal, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{structDoublyLinkedList_1_1Iterator_a8518425fc192346c00bedb825184bcf1}\label{structDoublyLinkedList_1_1Iterator_a8518425fc192346c00bedb825184bcf1} 
+\index{DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}!DoublyLinkedList@{DoublyLinkedList}}
+\index{DoublyLinkedList@{DoublyLinkedList}!DoublyLinkedList$<$ T $>$::Iterator@{DoublyLinkedList$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{DoublyLinkedList}{DoublyLinkedList}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+friend class \mbox{\hyperlink{classDoublyLinkedList}{Doubly\+Linked\+List}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Doubly\+Linked\+List.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,120 @@
+\doxysection{Linked\+Queue.\+hpp}
+\hypertarget{LinkedQueue_8hpp_source}{}\label{LinkedQueue_8hpp_source}\index{LinkedQueue.hpp@{LinkedQueue.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LINKED\_QUEUE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LINKED\_QUEUE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classLinkedQueue}{LinkedQueue}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classLinkedQueue_a2429b31e8bdbf840f5fcc80ff1319b11}{LinkedQueue}}()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classLinkedQueue_a2429b31e8bdbf840f5fcc80ff1319b11}{LinkedQueue}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classLinkedQueue}{LinkedQueue<T>}}\&\ rhs);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classLinkedQueue}{LinkedQueue<T>}}\&\ \mbox{\hyperlink{classLinkedQueue_a092a722336ece57317163b15e124eb6e}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classLinkedQueue}{LinkedQueue<T>}}\&\ rhs);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLinkedQueue_a49f8da542c9b1a54d808f404d7cc55bf}{enqueue}}(\textcolor{keyword}{const}\ T\&\ val);\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLinkedQueue_a16aba596aed65b385216ff85cb9bc302}{dequeue}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ T\&\ \mbox{\hyperlink{classLinkedQueue_a6d4fb77512085952ee16f81ec91b5ef2}{peek}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classLinkedQueue_a6d4fb77512085952ee16f81ec91b5ef2}{peek}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classLinkedQueue_a5e2f1e2079606e67f53039d55e845656}{empty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classLinkedQueue_ad84250d452864b16e000f4d1ee6295f6}{\string~LinkedQueue}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }Node\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ Node*\ next\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ T\ data;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ Node*\ first\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ Node*\ last\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ clear();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ swap(Node*\&\ first,\ Node*\&\ last);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00091\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classLinkedQueue_a2429b31e8bdbf840f5fcc80ff1319b11}{LinkedQueue<T>::LinkedQueue}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classLinkedQueue}{LinkedQueue<T>}}\&\ rhs)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ Node*\ iter\ =\ rhs.first;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (iter)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ enqueue(iter-\/>data);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ iter\ =\ iter-\/>next;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (std::bad\_alloc\ \&ex)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ clear();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00105\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classLinkedQueue}{LinkedQueue<T>}}\&\ \mbox{\hyperlink{classLinkedQueue_a092a722336ece57317163b15e124eb6e}{LinkedQueue<T>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classLinkedQueue}{LinkedQueue<T>}}\&\ rhs)\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ ==\ \&rhs)\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{classLinkedQueue}{LinkedQueue<T>}}\ temp\ =\ rhs;}
+\DoxyCodeLine{00108\ \ \ \ \ swap(first,\ temp.first);}
+\DoxyCodeLine{00109\ \ \ \ \ swap(last,\ temp.last);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ tempCount\ =\ count;}
+\DoxyCodeLine{00112\ \ \ \ \ count\ =\ temp.count;}
+\DoxyCodeLine{00113\ \ \ \ \ temp.count\ =\ tempCount;}
+\DoxyCodeLine{00114\ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00116\ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00119\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLinkedQueue_a49f8da542c9b1a54d808f404d7cc55bf}{LinkedQueue<T>::enqueue}}(\textcolor{keyword}{const}\ T\&\ val)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ Node*\ n\ =\ \textcolor{keyword}{new}\ Node\ \{\textcolor{keyword}{nullptr},\ val\};}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordflow}{if}\ (!last)\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ first\ =\ last\ =\ n;}
+\DoxyCodeLine{00123\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ last-\/>next\ =\ n;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ last\ =\ n;}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ ++count;}
+\DoxyCodeLine{00128\ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00131\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLinkedQueue_a16aba596aed65b385216ff85cb9bc302}{LinkedQueue<T>::dequeue}}()\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ Node*\ n\ =\ first;}
+\DoxyCodeLine{00133\ \ \ \ \ first\ =\ first-\/>next;}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{delete}\ n;}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{if}\ (!first)\ last\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00136\ \ \ \ \ -\/-\/count;}
+\DoxyCodeLine{00137\ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00140\ \textcolor{keyword}{inline}\ T\&\ \mbox{\hyperlink{classLinkedQueue_a6d4fb77512085952ee16f81ec91b5ef2}{LinkedQueue<T>::peek}}()\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{return}\ first-\/>data;}
+\DoxyCodeLine{00142\ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00145\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classLinkedQueue_a6d4fb77512085952ee16f81ec91b5ef2}{LinkedQueue<T>::peek}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{return}\ first-\/>data;}
+\DoxyCodeLine{00147\ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00150\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classLinkedQueue_a5e2f1e2079606e67f53039d55e845656}{LinkedQueue<T>::empty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordflow}{return}\ count\ ==\ 0;}
+\DoxyCodeLine{00152\ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00155\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLinkedQueue}{LinkedQueue<T>::clear}}()\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{while}(!empty())\ dequeue();}
+\DoxyCodeLine{00157\ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00160\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLinkedQueue}{LinkedQueue<T>::swap}}(Node*\&\ first,\ Node*\&\ last)\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ Node*\ temp\ =\ first;}
+\DoxyCodeLine{00162\ \ \ \ \ first\ =\ last;}
+\DoxyCodeLine{00163\ \ \ \ \ last\ =\ temp;}
+\DoxyCodeLine{00164\ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00167\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classLinkedQueue_ad84250d452864b16e000f4d1ee6295f6}{LinkedQueue<T>::\string~LinkedQueue}}()\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ clear();}
+\DoxyCodeLine{00169\ \}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
