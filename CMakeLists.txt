@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5.0)
 project(Data-Structures VERSION 0.1.0 LANGUAGES C CXX)
 
 add_library(${PROJECT_NAME} INTERFACE)
-target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 find_package(Catch2 3 REQUIRED)
 
@@ -22,7 +22,7 @@ set(sources
 )
 
 add_executable(tests ${sources})
-target_include_directories(tests PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
 
 include(CTest)
