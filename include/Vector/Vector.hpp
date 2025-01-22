@@ -278,7 +278,7 @@ inline Vector<T>::Vector() {
 }
 
 template<typename T>
-inline Vector<T>::Vector(size_t size, const T& default_value = T()) {
+inline Vector<T>::Vector(size_t size, const T& default_value) {
     try {
         data = new T[size];
         for (size_t i = 0; i < size; ++i) {
