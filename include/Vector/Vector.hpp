@@ -100,6 +100,7 @@ class Vector {
          * Initializes the vector with a default capacity of 2.
          */
         Vector();
+        Vector(size_t size, const T& default_value = T());
         /**
          * @brief Copy constructor for the vector.
          * @param rhs The vector to copy.
@@ -271,6 +272,21 @@ inline Vector<T>::Vector() {
     try {
         data = new T[capacity];
     } catch (std::bad_alloc& e){
+        clear();
+        throw;
+    }
+}
+
+template<typename T>
+inline Vector<T>::Vector(size_t size, const T& default_value = T()) {
+    try {
+        data = new T[size];
+        for (size_t i = 0; i < size; ++i) {
+            data[i] = default_value;
+        }
+        count = size;
+        capacity = size;
+    } catch (std::bad_alloc& e) {
         clear();
         throw;
     }
