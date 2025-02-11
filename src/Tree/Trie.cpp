@@ -18,23 +18,30 @@ void Trie::insert(const string& word) {
 }
 
 bool Trie::remove(const string& word) {
-    if (!root) return false;
-    if (!contains(word)) return false;
+    if (!root || !contains(word)) return false;
+
+    TrieNode* current = root;
     TrieNode* last_final = nullptr;
+    size_t last_final_index = 0;
     size_t i = 0;
-    size_t next = 0;
-    while(word[i] != '\0') {
-        if (root->is_final && word[i+1] != '\0') {
-            last_final = root;
-            next = word[i] - 'a';
+
+    while (i < word.length()) {
+        if (current->is_final && i + 1 < word.length()) {
+            last_final = current;
+            last_final_index = word[i] - 'a';
         }
-        root = root->children[word[i] - 'a'];
+        current = current->children[word[i] - 'a'];
         ++i;
     }
 
-    clear(last_final->children[next]);
-    last_final->children[next] = nullptr;
-    
+    if (!last_final) {
+        clear(root);
+        root = new TrieNode();
+    } else {
+        clear(last_final->children[last_final_index]);
+        last_final->children[last_final_index] = nullptr;
+    }
+
     return true;
 }
 
