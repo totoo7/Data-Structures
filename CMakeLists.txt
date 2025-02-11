@@ -7,6 +7,8 @@ target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 find_package(Catch2 3 REQUIRED)
 
 set(sources 
+  src/Tree/Trie.cpp
+
   test/test_deque.cpp
   test/test_doubly_linked_list.cpp  
   test/test_linked_list.cpp
@@ -19,6 +21,8 @@ set(sources
   test/test_static_stack.cpp
   test/test_stack.cpp
   test/test_binary_search_tree.cpp
+  test/test_heap.cpp
+  test/test_trie.cpp
 )
 
 add_executable(tests ${sources})
