@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "Stack/Stack.hpp"
+#include "Stack.hpp"
 
 TEST_CASE("Stack") {
     SECTION("Default Constructor") {

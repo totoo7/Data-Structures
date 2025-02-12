@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "LinkedList/DoublyLinkedList.hpp"
+#include "DoublyLinkedList.hpp"
 
 TEST_CASE("DoublyLinkedList") {
     SECTION("Constructor creates an empty list") {

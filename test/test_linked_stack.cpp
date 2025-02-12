@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "Stack/LinkedStack.hpp"
+#include "LinkedStack.hpp"
 
 TEST_CASE("LinkedStack") {
     SECTION("Default Constructor") {

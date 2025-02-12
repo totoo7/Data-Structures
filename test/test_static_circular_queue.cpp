@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "Queue/StaticCircularQueue.hpp"
+#include "StaticCircularQueue.hpp"
 
 TEST_CASE("StaticCircularQueue") {
     StaticCircularQueue<int> queue_default;

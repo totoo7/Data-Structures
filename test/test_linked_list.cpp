@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "LinkedList/LinkedList.hpp"
+#include "LinkedList.hpp"
 
 TEST_CASE("LinkedList") {
     SECTION("Default constructor") {

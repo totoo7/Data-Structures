@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "Tree/Heap.hpp"
+#include "Heap.hpp"
 
 TEST_CASE("Heap") {
     SECTION("Default Constructor and Empty Check") {

@@ -1,8 +1,17 @@
 cmake_minimum_required(VERSION 3.5.0)
 project(Data-Structures VERSION 0.1.0 LANGUAGES C CXX)
 
+set(includes
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/LinkedList
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/Queue
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/Stack
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/Tree
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/Vector
+)
+
 add_library(${PROJECT_NAME} INTERFACE)
-target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(${PROJECT_NAME} INTERFACE ${includes})
 
 find_package(Catch2 3 REQUIRED)
 
@@ -26,7 +35,7 @@ set(sources
 )
 
 add_executable(tests ${sources})
-target_include_directories(tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(tests PRIVATE ${includes})
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
 
 include(CTest)

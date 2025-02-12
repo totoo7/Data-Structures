@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "Queue/Deque.hpp"
+#include "Deque.hpp"
 
 TEST_CASE("Deque") {
     SECTION("Constructor creates an empty deque") {

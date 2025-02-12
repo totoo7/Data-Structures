@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "Vector/Vector.hpp"
+#include "Vector.hpp"
 
 TEST_CASE("Vector") {
     SECTION("Default Constructor") {

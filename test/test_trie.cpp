@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "Tree/Trie.hpp"
+#include "Trie.hpp"
 
 TEST_CASE("Trie") {
     SECTION("Default Constructor and Empty Trie Check") {

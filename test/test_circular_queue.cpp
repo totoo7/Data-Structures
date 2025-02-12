@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "Queue/CircularQueue.hpp"
+#include "CircularQueue.hpp"
 
 TEST_CASE("CircularQueue") {
     SECTION("Default Constructor") {
