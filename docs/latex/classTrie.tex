@@ -1,0 +1,169 @@
+\doxysection{Trie Class Reference}
+\hypertarget{classTrie}{}\label{classTrie}\index{Trie@{Trie}}
+
+
+A class that represents a \doxylink{classTrie}{Trie} (prefix tree) data structure.  
+
+
+
+
+{\ttfamily \#include $<$Trie.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTrie_a6af57e9f25d0d0a2d59eea5a4a802908}{Trie}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classTrie}{Trie} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTrie_a10e92708bfe0776fdee6cf4494802e28}{Trie}} (const \mbox{\hyperlink{classTrie}{Trie}} \&rhs)=delete
+\begin{DoxyCompactList}\small\item\em Deleted copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTrie}{Trie}} \& \mbox{\hyperlink{classTrie_aa3ea09088cda91310e682ade97feb964}{operator=}} (const \mbox{\hyperlink{classTrie}{Trie}} \&rhs)=delete
+\begin{DoxyCompactList}\small\item\em Deleted copy assignment operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTrie_a2bda2cdf67e03ca7c21b939fb3344ab8}{insert}} (const string \&word)
+\begin{DoxyCompactList}\small\item\em Inserts a word into the \doxylink{classTrie}{Trie}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTrie_a95af829207848c00171b5438b62821e9}{remove}} (const string \&word)
+\begin{DoxyCompactList}\small\item\em Removes a word from the \doxylink{classTrie}{Trie}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTrie_abb5acd64dff4ad03506d61bb44a7ff20}{contains}} (const string \&word)
+\begin{DoxyCompactList}\small\item\em Checks if a word exists in the \doxylink{classTrie}{Trie}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTrie_ab8f062803808414e910f8b7276bb0432}{print}} (const string \&current\+\_\+word) const
+\begin{DoxyCompactList}\small\item\em Prints all words in the \doxylink{classTrie}{Trie}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTrie_add970f0d45d828e85e9d553d2f20b38c}{autocomplete}} (const string \&prefix)
+\begin{DoxyCompactList}\small\item\em Provides autocomplete suggestions for a given prefix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTrie_abf9d6f48d556e09d1b292412df153a4b}{\texorpdfstring{$\sim$}{\string~}\+Trie}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that clears the \doxylink{classTrie}{Trie} and deallocates memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that represents a \doxylink{classTrie}{Trie} (prefix tree) data structure. 
+
+This class provides operations for inserting, removing, checking if a word exists, printing all words in the \doxylink{classTrie}{Trie}, and providing autocomplete suggestions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTrie_a6af57e9f25d0d0a2d59eea5a4a802908}\label{classTrie_a6af57e9f25d0d0a2d59eea5a4a802908} 
+\index{Trie@{Trie}!Trie@{Trie}}
+\index{Trie@{Trie}!Trie@{Trie}}
+\doxysubsubsection{\texorpdfstring{Trie()}{Trie()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Trie\+::\+Trie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classTrie}{Trie} object. 
+
+Initializes the root node of the \doxylink{classTrie}{Trie}. \Hypertarget{classTrie_a10e92708bfe0776fdee6cf4494802e28}\label{classTrie_a10e92708bfe0776fdee6cf4494802e28} 
+\index{Trie@{Trie}!Trie@{Trie}}
+\index{Trie@{Trie}!Trie@{Trie}}
+\doxysubsubsection{\texorpdfstring{Trie()}{Trie()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Trie\+::\+Trie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTrie}{Trie}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Deleted copy constructor. 
+
+Copying a \doxylink{classTrie}{Trie} object is not supported. \Hypertarget{classTrie_abf9d6f48d556e09d1b292412df153a4b}\label{classTrie_abf9d6f48d556e09d1b292412df153a4b} 
+\index{Trie@{Trie}!````~Trie@{\texorpdfstring{$\sim$}{\string~}Trie}}
+\index{````~Trie@{\texorpdfstring{$\sim$}{\string~}Trie}!Trie@{Trie}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Trie()}{\string~Trie()}}
+{\footnotesize\ttfamily Trie\+::\texorpdfstring{$\sim$}{\string~}\+Trie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor that clears the \doxylink{classTrie}{Trie} and deallocates memory. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTrie_add970f0d45d828e85e9d553d2f20b38c}\label{classTrie_add970f0d45d828e85e9d553d2f20b38c} 
+\index{Trie@{Trie}!autocomplete@{autocomplete}}
+\index{autocomplete@{autocomplete}!Trie@{Trie}}
+\doxysubsubsection{\texorpdfstring{autocomplete()}{autocomplete()}}
+{\footnotesize\ttfamily void Trie\+::autocomplete (\begin{DoxyParamCaption}\item[{const string \&}]{prefix }\end{DoxyParamCaption})}
+
+
+
+Provides autocomplete suggestions for a given prefix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & The prefix to autocomplete. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTrie_abb5acd64dff4ad03506d61bb44a7ff20}\label{classTrie_abb5acd64dff4ad03506d61bb44a7ff20} 
+\index{Trie@{Trie}!contains@{contains}}
+\index{contains@{contains}!Trie@{Trie}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool Trie\+::contains (\begin{DoxyParamCaption}\item[{const string \&}]{word }\end{DoxyParamCaption})}
+
+
+
+Checks if a word exists in the \doxylink{classTrie}{Trie}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & The word to check for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the word exists, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classTrie_a2bda2cdf67e03ca7c21b939fb3344ab8}\label{classTrie_a2bda2cdf67e03ca7c21b939fb3344ab8} 
+\index{Trie@{Trie}!insert@{insert}}
+\index{insert@{insert}!Trie@{Trie}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Trie\+::insert (\begin{DoxyParamCaption}\item[{const string \&}]{word }\end{DoxyParamCaption})}
+
+
+
+Inserts a word into the \doxylink{classTrie}{Trie}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & The word to insert into the \doxylink{classTrie}{Trie}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTrie_aa3ea09088cda91310e682ade97feb964}\label{classTrie_aa3ea09088cda91310e682ade97feb964} 
+\index{Trie@{Trie}!operator=@{operator=}}
+\index{operator=@{operator=}!Trie@{Trie}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTrie}{Trie}} \& Trie\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTrie}{Trie}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Deleted copy assignment operator. 
+
+Assigning a \doxylink{classTrie}{Trie} object is not supported. \Hypertarget{classTrie_ab8f062803808414e910f8b7276bb0432}\label{classTrie_ab8f062803808414e910f8b7276bb0432} 
+\index{Trie@{Trie}!print@{print}}
+\index{print@{print}!Trie@{Trie}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Trie\+::print (\begin{DoxyParamCaption}\item[{const string \&}]{current\+\_\+word }\end{DoxyParamCaption}) const}
+
+
+
+Prints all words in the \doxylink{classTrie}{Trie}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+word} & The current prefix to print. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTrie_a95af829207848c00171b5438b62821e9}\label{classTrie_a95af829207848c00171b5438b62821e9} 
+\index{Trie@{Trie}!remove@{remove}}
+\index{remove@{remove}!Trie@{Trie}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool Trie\+::remove (\begin{DoxyParamCaption}\item[{const string \&}]{word }\end{DoxyParamCaption})}
+
+
+
+Removes a word from the \doxylink{classTrie}{Trie}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & The word to remove from the \doxylink{classTrie}{Trie}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the word was successfully removed, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Trie.\+hpp\end{DoxyCompactItemize}

@@ -5,23 +5,83 @@
 #include "Vector/Vector.hpp"
 using namespace std;
 
+/**
+ * @class Heap
+ * @brief A k-ary heap implementation using a dynamic vector.
+ *
+ * @tparam T The type of elements stored in the heap.
+ */
 template<typename T>
 class Heap {
     public:
+        /**
+         * @brief Constructs a k-ary heap with a given branching factor.
+         * @param k The number of children each node can have (default is 2).
+         */
         Heap(size_t k = 2);
+        /**
+         * @brief Default copy constructor.
+         */
         Heap(const Heap<T>& rhs) = default;
+        /**
+         * @brief Default copy assignment operator.
+         */
         Heap<T>& operator=(const Heap<T>& rhs) = default;
+        /**
+         * @brief Inserts a new element into the heap.
+         * @param value The value to be inserted.
+         */
         void insert(const T& value);
+        /**
+         * @brief Retrieves the minimum element in the heap.
+         * @return The minimum element.
+         */
         T get_min();
+        /**
+         * @brief Removes the minimum element from the heap.
+         */
         void remove_min();
+        /**
+         * @brief Checks if the heap is empty.
+         * @return True if the heap is empty, otherwise false.
+         */
         bool is_empty() const;
+        /**
+         * @brief Gets the number of elements in the heap.
+         * @return The size of the heap.
+         */
         int size() const;
+        /**
+         * @brief Prints the contents of the heap.
+         */
         void print() const;
+        /**
+         * @brief Default destructor.
+         */
         ~Heap() = default;
     private:
+        /**
+         * @brief Returns the index of the parent of a given node.
+         * @param index The index of the child node.
+         * @return The index of the parent node.
+         */
         size_t parent(size_t index);
+        /**
+         * @brief Returns the index of the j-th child of a given node.
+         * @param index The index of the parent node.
+         * @param j The child number (1-based index).
+         * @return The index of the j-th child.
+         */
         size_t child(size_t index, size_t j);
+        /**
+         * @brief Restores the heap property by moving an element up.
+         * @param index The index of the element to move up.
+         */
         void heapify_up(size_t index);
+        /**
+         * @brief Restores the heap property by moving an element down.
+         * @param index The index of the element to move down.
+         */
         void heapify_down(size_t index);
     private:
         Vector<T> data;

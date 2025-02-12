@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['height_0',['height',['../classBinarySearchTree.html#acaeaebc8e9558367c70e40faee96cfc3',1,'BinarySearchTree']]]
+  ['get_5fmin_0',['get_min',['../classHeap.html#a48f35bf7a461a0d77f800861251feaf6',1,'Heap']]]
 ];

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['insert_0',['insert',['../classDoublyLinkedList.html#a54abf0a55cb06a9a072d9310d722f6e4',1,'DoublyLinkedList::insert()'],['../classBinarySearchTree.html#a0a5cac442dbab19565077435b16243b1',1,'BinarySearchTree::insert()']]],
-  ['is_5fempty_1',['is_empty',['../classLinkedList.html#a4b4fb68b6611f6913953257a24cbca74',1,'LinkedList::is_empty()'],['../classQueue.html#a354902adb7468d07891ba04a4003fc6d',1,'Queue::is_empty()'],['../classStaticCircularQueue.html#a735ba07378b7279814b4311a47110f3d',1,'StaticCircularQueue::is_empty()'],['../classLinkedStack.html#af5ba899899a864da44402c3d8540ac85',1,'LinkedStack::is_empty()'],['../classStack.html#a22739f1a314ccd6e85c4d268acaecbbe',1,'Stack::is_empty()'],['../classStaticStack.html#a82eab0b164369db70ca5142de2e098a8',1,'StaticStack::is_empty()']]],
-  ['is_5ffull_2',['is_full',['../classStaticCircularQueue.html#a92481141cff5f978f1bd861ed0380cf4',1,'StaticCircularQueue::is_full()'],['../classStaticStack.html#a14f5c41a79fef4b1398206dd2c54a943',1,'StaticStack::is_full()']]],
-  ['is_5fsorted_3',['is_sorted',['../classLinkedList.html#aa195ce9690eee90515dad1a3e046e98f',1,'LinkedList']]],
-  ['iterator_4',['iterator',['../structDoublyLinkedList_1_1Iterator.html#a65c4a5321401795079779bad29298284',1,'DoublyLinkedList::Iterator::Iterator()'],['../classVector_1_1Iterator.html#a9d7197db299b1285dd84bf76e180a64d',1,'Vector::Iterator::Iterator()'],['../classVector_1_1Iterator.html#a832955507936018f8c820b7fb0922444',1,'Vector::Iterator::Iterator(Vector&lt; T &gt; *vector)'],['../classVector_1_1Iterator.html#a92b24b6f569d7a62e33412da46e23de9',1,'Vector::Iterator::Iterator(Vector&lt; T &gt; *vector, size_t index)']]]
+  ['heap_0',['heap',['../classHeap.html#a1e8bb0a0816a3354c6ada65a7733f8fc',1,'Heap::Heap(size_t k=2)'],['../classHeap.html#a528bccb838d592e53e8a5432ba16ae01',1,'Heap::Heap(const Heap&lt; T &gt; &amp;rhs)=default']]],
+  ['height_1',['height',['../classBinarySearchTree.html#acaeaebc8e9558367c70e40faee96cfc3',1,'BinarySearchTree']]]
 ];

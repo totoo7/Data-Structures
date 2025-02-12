@@ -1,0 +1,186 @@
+\doxysection{Heap\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classHeap}{}\label{classHeap}\index{Heap$<$ T $>$@{Heap$<$ T $>$}}
+
+
+A k-\/ary heap implementation using a dynamic vector.  
+
+
+
+
+{\ttfamily \#include $<$Heap.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHeap_a1e8bb0a0816a3354c6ada65a7733f8fc}{Heap}} (size\+\_\+t k=2)
+\begin{DoxyCompactList}\small\item\em Constructs a k-\/ary heap with a given branching factor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHeap_a528bccb838d592e53e8a5432ba16ae01}{Heap}} (const \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$ \&rhs)=default
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$ \& \mbox{\hyperlink{classHeap_a417edbd0e7865e8668b69112e64da4fb}{operator=}} (const \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$ \&rhs)=default
+\begin{DoxyCompactList}\small\item\em Default copy assignment operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_ab1c0baf2fa4fce25fc325dbcf45aa958}{insert}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Inserts a new element into the heap. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classHeap_a48f35bf7a461a0d77f800861251feaf6}{get\+\_\+min}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the minimum element in the heap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_ac7d078044791aec600402f600a8c314f}{remove\+\_\+min}} ()
+\begin{DoxyCompactList}\small\item\em Removes the minimum element from the heap. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHeap_af219c05dc46d5d84444085b50e748609}{is\+\_\+empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the heap is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classHeap_a3e51d19804b33bc1153a6cca9a04d61b}{size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of elements in the heap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_a4a4d422fb1544e7dec369598488c7239}{print}} () const
+\begin{DoxyCompactList}\small\item\em Prints the contents of the heap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHeap_a16042548c86de783c8d1d5f6f4927e0d}{\texorpdfstring{$\sim$}{\string~}\+Heap}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Heap$<$ T $>$}
+A k-\/ary heap implementation using a dynamic vector. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the heap. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHeap_a1e8bb0a0816a3354c6ada65a7733f8fc}\label{classHeap_a1e8bb0a0816a3354c6ada65a7733f8fc} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!Heap@{Heap}}
+\index{Heap@{Heap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Heap()}{Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\mbox{\hyperlink{classHeap}{\+::\+Heap}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{k = {\ttfamily 2} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a k-\/ary heap with a given branching factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The number of children each node can have (default is 2). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHeap_a528bccb838d592e53e8a5432ba16ae01}\label{classHeap_a528bccb838d592e53e8a5432ba16ae01} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!Heap@{Heap}}
+\index{Heap@{Heap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Heap()}{Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\mbox{\hyperlink{classHeap}{\+::\+Heap}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default copy constructor. 
+
+\Hypertarget{classHeap_a16042548c86de783c8d1d5f6f4927e0d}\label{classHeap_a16042548c86de783c8d1d5f6f4927e0d} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!````~Heap@{\texorpdfstring{$\sim$}{\string~}Heap}}
+\index{````~Heap@{\texorpdfstring{$\sim$}{\string~}Heap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Heap()}{\string~Heap()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classHeap}{Heap}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHeap_a48f35bf7a461a0d77f800861251feaf6}\label{classHeap_a48f35bf7a461a0d77f800861251feaf6} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!get\_min@{get\_min}}
+\index{get\_min@{get\_min}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_min()}{get\_min()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::get\+\_\+min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the minimum element in the heap. 
+
+\begin{DoxyReturn}{Returns}
+The minimum element. 
+\end{DoxyReturn}
+\Hypertarget{classHeap_ab1c0baf2fa4fce25fc325dbcf45aa958}\label{classHeap_ab1c0baf2fa4fce25fc325dbcf45aa958} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts a new element into the heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to be inserted. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHeap_af219c05dc46d5d84444085b50e748609}\label{classHeap_af219c05dc46d5d84444085b50e748609} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::is\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the heap is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the heap is empty, otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{classHeap_a417edbd0e7865e8668b69112e64da4fb}\label{classHeap_a417edbd0e7865e8668b69112e64da4fb} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$ \& \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default copy assignment operator. 
+
+\Hypertarget{classHeap_a4a4d422fb1544e7dec369598488c7239}\label{classHeap_a4a4d422fb1544e7dec369598488c7239} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!print@{print}}
+\index{print@{print}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the contents of the heap. 
+
+\Hypertarget{classHeap_ac7d078044791aec600402f600a8c314f}\label{classHeap_ac7d078044791aec600402f600a8c314f} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!remove\_min@{remove\_min}}
+\index{remove\_min@{remove\_min}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove\_min()}{remove\_min()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::remove\+\_\+min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the minimum element from the heap. 
+
+\Hypertarget{classHeap_a3e51d19804b33bc1153a6cca9a04d61b}\label{classHeap_a3e51d19804b33bc1153a6cca9a04d61b} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!size@{size}}
+\index{size@{size}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the number of elements in the heap. 
+
+\begin{DoxyReturn}{Returns}
+The size of the heap. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Heap.\+hpp\end{DoxyCompactItemize}

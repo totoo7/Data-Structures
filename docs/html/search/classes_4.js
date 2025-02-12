@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['linkedlist_0',['LinkedList',['../classLinkedList.html',1,'']]],
-  ['linkedqueue_1',['LinkedQueue',['../classLinkedQueue.html',1,'']]],
-  ['linkedstack_2',['LinkedStack',['../classLinkedStack.html',1,'']]]
+  ['iterator_0',['iterator',['../structDoublyLinkedList_1_1Iterator.html',1,'DoublyLinkedList&lt; T &gt;::Iterator'],['../classLinkedList_1_1Iterator.html',1,'LinkedList&lt; T &gt;::Iterator'],['../classVector_1_1Iterator.html',1,'Vector&lt; T &gt;::Iterator']]]
 ];

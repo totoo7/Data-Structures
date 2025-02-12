@@ -1,0 +1,110 @@
+\doxysection{Heap.\+hpp}
+\hypertarget{Heap_8hpp_source}{}\label{Heap_8hpp_source}\index{Heap.hpp@{Heap.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HEAP\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HEAP\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Vector/Vector.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHeap}{Heap}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHeap}{Heap}}(\textcolor{keywordtype}{size\_t}\ k\ =\ 2);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHeap_a528bccb838d592e53e8a5432ba16ae01}{Heap}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classHeap}{Heap<T>}}\&\ rhs)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHeap}{Heap<T>}}\&\ \mbox{\hyperlink{classHeap_a417edbd0e7865e8668b69112e64da4fb}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classHeap}{Heap<T>}}\&\ rhs)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHeap_ab1c0baf2fa4fce25fc325dbcf45aa958}{insert}}(\textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{classHeap_a48f35bf7a461a0d77f800861251feaf6}{get\_min}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHeap_ac7d078044791aec600402f600a8c314f}{remove\_min}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHeap_af219c05dc46d5d84444085b50e748609}{is\_empty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classHeap_a3e51d19804b33bc1153a6cca9a04d61b}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHeap_a4a4d422fb1544e7dec369598488c7239}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHeap_a16042548c86de783c8d1d5f6f4927e0d}{\string~Heap}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ parent(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ child(\textcolor{keywordtype}{size\_t}\ index,\ \textcolor{keywordtype}{size\_t}\ j);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ heapify\_up(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ heapify\_down(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<T>}}\ data;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ k;}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00092\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classHeap_a1e8bb0a0816a3354c6ada65a7733f8fc}{Heap<T>::Heap}}(\textcolor{keywordtype}{size\_t}\ k)\ :\ k(k)\ \{\}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00095\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHeap_ab1c0baf2fa4fce25fc325dbcf45aa958}{Heap<T>::insert}}(\textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ data.push\_back(value);}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ data.size()-\/1;}
+\DoxyCodeLine{00098\ \ \ \ \ heapify\_up(index);}
+\DoxyCodeLine{00099\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00102\ \textcolor{keyword}{inline}\ T\ \mbox{\hyperlink{classHeap_a48f35bf7a461a0d77f800861251feaf6}{Heap<T>::get\_min}}()\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordflow}{return}\ data[0];}
+\DoxyCodeLine{00104\ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00107\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHeap_ac7d078044791aec600402f600a8c314f}{Heap<T>::remove\_min}}()\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ data[0]\ =\ data.back();}
+\DoxyCodeLine{00109\ \ \ \ \ data.pop\_back();}
+\DoxyCodeLine{00110\ \ \ \ \ heapify\_down(0);}
+\DoxyCodeLine{00111\ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00114\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHeap_af219c05dc46d5d84444085b50e748609}{Heap<T>::is\_empty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{return}\ data.empty();}
+\DoxyCodeLine{00116\ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00119\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classHeap_a3e51d19804b33bc1153a6cca9a04d61b}{Heap<T>::size}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{return}\ data.size();}
+\DoxyCodeLine{00121\ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00124\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHeap_a4a4d422fb1544e7dec369598488c7239}{Heap<T>::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ data.size();\ i++)\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ cout\ <<\ data[i]\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00129\ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00132\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHeap}{Heap<T>::parent}}(\textcolor{keywordtype}{size\_t}\ index)\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{return}\ (index-\/1)/k;}
+\DoxyCodeLine{00134\ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00137\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHeap}{Heap<T>::child}}(\textcolor{keywordtype}{size\_t}\ index,\ \textcolor{keywordtype}{size\_t}\ j)\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{return}\ k\ *\ index\ +\ j;}
+\DoxyCodeLine{00139\ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00142\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHeap}{Heap<T>::heapify\_up}}(\textcolor{keywordtype}{size\_t}\ index)\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{while}\ (index\ >\ 0\ \&\&\ data[index]\ <\ data[parent(index)])\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ swap(data[index],\ data[parent(index)]);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ index\ =\ parent(index);}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00150\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHeap}{Heap<T>::heapify\_down}}(\textcolor{keywordtype}{size\_t}\ index)\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ min\ =\ index;}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ k;\ i++)\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ child\_index\ =\ child(index,\ i);}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (child\_index\ <\ data.size()\ \&\&\ data[child\_index]\ <\ data[min])\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ child\_index;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{if}\ (min\ !=\ index)\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ swap(data[index],\ data[min]);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ heapify\_down(min);}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

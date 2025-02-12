@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['vector_0',['Vector',['../classVector.html',1,'']]]
+  ['stack_0',['Stack',['../classStack.html',1,'']]],
+  ['staticcircularqueue_1',['StaticCircularQueue',['../classStaticCircularQueue.html',1,'']]],
+  ['staticstack_2',['StaticStack',['../classStaticStack.html',1,'']]]
 ];

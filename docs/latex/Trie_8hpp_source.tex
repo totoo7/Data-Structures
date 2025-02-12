@@ -1,0 +1,39 @@
+\doxysection{Trie.\+hpp}
+\hypertarget{Trie_8hpp_source}{}\label{Trie_8hpp_source}\index{Trie.hpp@{Trie.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRIE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRIE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTrie}{Trie}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }TrieNode\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ TrieNode*\ children[26]\ =\ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_final\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ TrieNode()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ TrieNode*\ root;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTrie_a6af57e9f25d0d0a2d59eea5a4a802908}{Trie}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTrie_a10e92708bfe0776fdee6cf4494802e28}{Trie}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTrie}{Trie}}\&\ rhs)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTrie}{Trie}}\&\ \mbox{\hyperlink{classTrie_aa3ea09088cda91310e682ade97feb964}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTrie}{Trie}}\&\ rhs)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTrie_a2bda2cdf67e03ca7c21b939fb3344ab8}{insert}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ word);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTrie_a95af829207848c00171b5438b62821e9}{remove}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ word);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTrie_abb5acd64dff4ad03506d61bb44a7ff20}{contains}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ word);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTrie_ab8f062803808414e910f8b7276bb0432}{print}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ current\_word)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTrie_add970f0d45d828e85e9d553d2f20b38c}{autocomplete}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ prefix);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTrie_abf9d6f48d556e09d1b292412df153a4b}{\string~Trie}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ clear(TrieNode*\ root);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTrie_ab8f062803808414e910f8b7276bb0432}{print}}(TrieNode*\ root,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ current\_word)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTrie_add970f0d45d828e85e9d553d2f20b38c}{autocomplete}}(TrieNode*\ root,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ prefix);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ TrieNode*\ start\_with(TrieNode*\ root,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ prefix);}
+\DoxyCodeLine{00114\ \};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
